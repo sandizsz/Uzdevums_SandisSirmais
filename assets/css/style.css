@@ -1,20 +1,20 @@
 @font-face {
   font-family: "oswald-medium";
-  src: url('assets/fonts/Oswald-VariableFont_wght.ttf') format("truetype"), url('assets/fonts/oswald-medium-webfont.woff') format("woff");
+  src: url('Uzdevums_SandisSirmais/assets/fonts/Oswald-VariableFont_wght.ttf') format("truetype"), url('Uzdevums_SandisSirmais/assets/fonts/oswald-medium-webfont.woff') format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "montserrat-regular";
-  src: url('Uzdevums_SandisSirmais/assets/fonts/Montserrat-Regular.ttf') format("truetype"), url("assets/fonts/montserrat-regular-webfont.woff") format("woff");
+  src: url('Uzdevums_SandisSirmais/assets/fonts/Montserrat-Regular.ttf') format("truetype"), url('Uzdevums_SandisSirmais/assets/fonts/montserrat-regular-webfont.woff') format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "montserrat-medium";
-  src: url("assets/fonts/FontsFree-Net-Montserrat-Medium.ttf") format("truetype"), url("assets/fonts/montserrat-medium-webfont.woff") format("woff");
+  src: url('Uzdevums_SandisSirmais/assets/fonts/FontsFree-Net-Montserrat-Medium.ttf') format("truetype"), url('Uzdevums_SandisSirmais/assets/fonts/montserrat-medium-webfont.woff') format("woff");
   font-weight: normal;
   font-style: normal;
 }
