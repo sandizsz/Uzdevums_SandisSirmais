@@ -1,6 +1,6 @@
 @font-face {
   font-family: "oswald-medium";
-  src: url(assets/fonts/Oswald-VariableFont_wght.ttf) format("truetype"), url(assets/fonts/oswald-medium-webfont.woff) format("woff");
+  src: url('assets/fonts/Oswald-VariableFont_wght.ttf') format("truetype"), url('assets/fonts/oswald-medium-webfont.woff') format("woff");
   font-weight: normal;
   font-style: normal;
 }
