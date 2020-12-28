@@ -1,0 +1,1 @@
+Links uz lapu - https://sandizsz.github.io/Uzdevums_SandisSirmais/
