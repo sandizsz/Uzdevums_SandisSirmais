@@ -32,7 +32,7 @@ header {
 }
 
 body {
-  background-color: white;
+  background-color: green;
 }
 
 .container {
@@ -131,7 +131,6 @@ nav ul li a {
   margin-top: -7.44px;
   position: relative;
   z-index: 0;
-
   width: 1366px;
 }
 
