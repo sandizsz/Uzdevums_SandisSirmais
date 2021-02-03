@@ -27,10 +27,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: green;
+}
+
 header {
   overflow: hidden;
 }
-
 
 .container {
   max-width: 1366px;
@@ -1289,3 +1292,30 @@ input[type="checkbox"] {
 }
 
 /* atbalstītāji end */
+
+
+/* Idejas Lapa start */
+
+h1 {
+  font-family: oswald-medium;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 71.14px;
+    text-align: center;
+    display: block;
+    max-width: 654px;
+    max-height: 114px;
+    margin: 0 auto;
+    margin-top: 85px;
+}
+
+.text {
+  margin-top: 60px;
+  max-width: 606px;
+  max-height: 112px;
+
+}
+
+
+
+/* Idejas Lapa end */
