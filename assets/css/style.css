@@ -1439,3 +1439,59 @@ polyline {
 
 
 /* Idejas Lapa end */
+
+
+
+
+/*Piesaki sapni lapa start*/
+
+
+.textsapnis {
+  font-family: montserrat-medium;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29.26px;
+  margin: 0 auto;
+  display: block;
+  max-width: 818px;
+  text-align: center;
+  
+}
+
+.cta-wrapper-sapnis {
+  margin-top: 90px;
+  margin-bottom: 140px;
+  margin-inline: 168px;
+  justify-content: space-between;
+  display: flex;
+  margin-block: 150px;
+  text-align: center;
+  
+}
+
+.cta-wrapper-sapnis p {
+  font-family: montserrat-regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.94px;
+}
+
+.cta-wrapper-inner1-sapnis, .cta-wrapper-inner2-sapnis {
+  max-width: 394px;
+}
+
+.cta-wrapper-sapnis img {
+  margin-bottom: 60px;
+}
+
+.cta-wrapper-sapnis h3 {
+  margin-bottom: 30px;
+}
+
+.cta-wrapper-inner1-sapnis .button {
+  margin-top: 143px;
+}
+
+
+
+/*Piesaki sapni lapa end*/
