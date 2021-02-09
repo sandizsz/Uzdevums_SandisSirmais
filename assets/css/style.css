@@ -681,6 +681,10 @@ section {
   text-align: center;
 }
 
+.email-wrapper {
+  margin-top: 150px;
+}
+
 .form-input {
   max-width: 612px;
   margin: 0 auto;
@@ -1322,6 +1326,10 @@ h1 {
 }
 
 
+.footer-wrapper-margin {
+  margin-top: 201.66px;
+}
+
 .bg::after {
   content:'';
   position:absolute;
@@ -1356,7 +1364,7 @@ q {
   display: block;
   margin: 0 auto;
   margin-top: 150px;
-  margin-bottom: 150px;
+  margin-bottom: 188px;
   max-width: 602px;
 
 }
@@ -1495,3 +1503,18 @@ polyline {
 
 
 /*Piesaki sapni lapa end*/
+
+
+/*uznemejiem lapa start*/
+
+.text-uznemejiem {
+font-family: montserrat-medium;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.94px;
+  margin: 0 auto;
+  display: block;
+  max-width: 810px;
+  text-align: center;
+}
+/* uznemejiem lapa end*/
