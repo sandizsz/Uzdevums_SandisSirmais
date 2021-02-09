@@ -1309,7 +1309,9 @@ h1 {
     display: block;
     margin: 0 auto;
     margin-top: 85px;
+    margin-bottom: 60px;  /* universal attribute, visiem h1 */
 }
+
 
 .textideja {
   margin: 0 auto;
