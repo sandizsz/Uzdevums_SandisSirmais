@@ -1457,7 +1457,7 @@ polyline {
 
 
 .textsapnis {
-  font-family: montserrat-medium;
+  font-family: montserrat-regular;
   font-weight: 500;
   font-size: 24px;
   line-height: 29.26px;
@@ -1510,7 +1510,7 @@ polyline {
 /*uznemejiem lapa start*/
 
 .text-uznemejiem {
-font-family: montserrat-medium;
+font-family: montserrat-regular;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.94px;
@@ -1520,3 +1520,181 @@ font-family: montserrat-medium;
   text-align: center;
 }
 /* uznemejiem lapa end*/
+
+
+/* Sapnu banka lapa start */
+
+.sapnu-banka-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.sapnu-banka-flex-item1 .sapnu-banka-text, 
+.sapnu-banka-flex-item3 .sapnu-banka-text {
+  max-width: 500px;
+}
+
+.sapnu-banka-flex-item2 .sapnu-banka-text {
+  max-width: 495px;
+}
+
+.sapnu-banka-flex-item1, .sapnu-banka-flex-item3 {
+  display: inline-flex;
+  text-align: left;
+  align-items: center;
+  gap: 62px;
+
+}
+
+.sapnu-banka-flex-item2 {
+  display: inline-flex;
+  text-align: right;
+  align-items: center;
+  gap: 67px;
+
+}
+
+.sapnu-banka-text {
+  font-family: montserrat-regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.94px;
+}
+
+.sapnu-banka-text-medium {
+  font-family: montserrat-regular;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29.26px;
+  text-align: center;
+}
+
+.logo-section-inner-item1-sapnu p {
+  margin-top: 40px;
+}
+
+.sapnubanka-h3 {
+  font-family: oswald-medium;
+  font-size: 30px;
+  font-weight: 500;
+  color: #2f4858;
+  line-height: 44.46px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.logo-section-sapnu {
+  position: relative;
+  margin-top: 150px;
+}
+
+
+.dzeltens-sapnu img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-width: 768px;
+  min-height: 533px;
+}
+
+@media (max-width: 768px) {
+  .dzeltens-sapnu img {
+    min-width: 460px !important;
+    min-height: 471px;
+  }
+}
+
+
+@media (max-width: 460px) {
+  .dzeltens-sapnu img {
+    min-width: 320px !important;
+    min-height: 471px;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.logo-section-inner-item1-sapnu img {
+  max-width: 367.6px;
+  max-height: 256.63px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.logo-section-inner-sapnu {
+  align-items: center;
+  position: absolute;
+  top: 0;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 1366px;
+  width: 100%;
+  margin-top: 5.5%;
+}
+
+.cta-wrapper-sapnubanka {
+    margin-top: 90px;
+    margin-bottom: 150px;
+    margin-inline: 275px;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    align-items: baseline;
+    
+}
+
+.cta-wrapper-sapnubanka p{
+  max-width: 275px;
+  
+}
+
+/*Sapnu banka lapa end */
+
+
+
+
+/*try*/
+ /* Just a parent container for the videos */
+ .videos {
+  margin: 20px auto;
+  max-width: 1366px;
+}
+/* Individual video container */
+.video-wrap1 {
+  position: relative;
+  max-width: 1366px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* video poster frame or placeholder image */
+.video-wrap1 .placeholder {
+  max-width: 1366px;
+  width: 100%;
+}
+/* SVG play button container */
+.video-wrap1 .play-btn {
+  position: absolute;
+  max-width: 700px;
+  width: 86px;
+  height: 83px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* adjust your icon size, add different breakpoints as needed */
+@media screen and (max-width: 600px) {
+  .video-wrap1 .play-btn {
+    width: 70px;
+    height: 70px;
+  }
+}
+/*try*/
+
+
