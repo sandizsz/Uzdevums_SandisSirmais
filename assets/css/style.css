@@ -1638,10 +1638,39 @@ font-family: montserrat-regular;
 
 /* Sapnu banka lapa start */
 
+.videos {
+  margin: 20px auto;
+  max-width: 1366px;
+}
+/* Individual video container */
+.video-wrap1 {
+  position: relative;
+  max-width: 1366px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* video poster frame or placeholder image */
+.video-wrap1 .placeholder {
+  max-width: 1366px;
+  width: 100%;
+}
+/* SVG play button container */
+.video-wrap1 .play-btn {
+  position: absolute;
+  max-width: 700px;
+  width: 86px;
+  height: 83px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .sapnu-banka-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 106px;
+  margin-top: 90px;
 
 }
 
@@ -1685,6 +1714,21 @@ font-family: montserrat-regular;
   text-align: center;
 }
 
+.text-size0 {
+  padding-top: 50px;
+}
+
+.text-size1,
+.text-size0 {
+  max-width: 818px;
+  margin: 0 auto;
+}
+
+.text-size2 {
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
 .logo-section-inner-item1-sapnu p {
   margin-top: 40px;
 }
@@ -1714,24 +1758,6 @@ font-family: montserrat-regular;
   min-height: 533px;
 }
 
-@media (max-width: 768px) {
-  .dzeltens-sapnu img {
-    min-width: 460px !important;
-    min-height: 471px;
-  }
-}
-
-
-@media (max-width: 460px) {
-  .dzeltens-sapnu img {
-    min-width: 320px !important;
-    min-height: 471px;
-    width: 100%;
-    height: 100%;
-  }
-
-}
-
 .logo-section-inner-item1-sapnu img {
   max-width: 367.6px;
   max-height: 256.63px;
@@ -1749,18 +1775,23 @@ font-family: montserrat-regular;
   text-align: center;
   max-width: 1366px;
   width: 100%;
-  margin-top: 5.5%;
+  margin-top: 75px;
+  color: white;
 }
 
 .cta-wrapper-sapnubanka {
-    margin-top: 90px;
+    margin-top: 60px;
     margin-bottom: 150px;
-    margin-inline: 275px;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 241px;
     display: flex;
     text-align: center;
     align-items: baseline;
     
+}
+
+.cta-wrapper-sapnubanka img {
+  margin-bottom: 30px;
 }
 
 .cta-wrapper-sapnubanka p{
@@ -1768,47 +1799,181 @@ font-family: montserrat-regular;
   
 }
 
+.sapnubanka .footer-wrapper-margin {
+  margin-top: 193px;
+}
+
+
+@media (max-width: 768px) {
+  .dzeltens-sapnu img {
+    min-width: 460px !important;
+    min-height: 471px;
+  }
+
+  .cta-wrapper-sapnubanka {
+    gap: 30px;
+  }
+
+  .sapnu-banka-flex-item1 .sapnu-banka-text, 
+  .sapnu-banka-flex-item3 .sapnu-banka-text { 
+    max-width: 353px;
+  }
+
+  .sapnu-banka-flex-item2 .sapnu-banka-text {
+    max-width: 351px;
+  }
+
+  .text-size0,
+  .text-size1,
+  .text-size2 {
+    max-width: 608px;
+  }
+
+  .cta-wrapper-inner1-sapnubanka img {
+    max-width: 102.04px;
+  }
+
+  .cta-wrapper-inner2-sapnubanka img {
+    max-width: 160.15px;
+  }
+
+
+  .cta-wrapper-sapnubanka img {
+    margin-bottom: 25px;
+  }
+
+  .logo-section-inner-item1-sapnu img {
+    max-width: 300px;
+  }
+
+  .cta-wrapper-sapnubanka .sapnu-banka-text-medium {
+    font-size: 18px;
+    line-height: 21.94px;
+  }
+
+  h1 {
+    margin-top: 80px; /* visam lapaam universal */
+  }
+}
+
+@media (max-width: 650px) {
+
+  h1 { /* visam lapaam universal */
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+
+  .video-wrap1 .play-btn img {
+    width: 65px;
+    height: 63px;
+  }
+  
+  .sapnu-banka-flex > * {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .sapnu-banka-flex img {
+    max-width: 145px;
+  }
+
+  .sapnu-banka-flex {
+    gap: 60px;
+  }
+
+  .sapnu-banka-text {
+    font-size: 16px;
+    max-width: 280px;
+    text-align: center;
+    padding-inline: min(20px, 5%, 50px);
+  }
+
+  .sapnu-banka-flex-item2 {
+    flex-direction: column-reverse;
+  }
+
+  .sapnubanka-h3 {
+    margin-top: 120px;
+  }
+
+  .logo-section-sapnu {
+    margin-top: 120px;
+  }
+
+  .cta-wrapper-sapnubanka {
+    gap: 60px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+  .sapnu-banka-text-medium {
+    padding-inline: min(20px, 5%, 50px);
+  }
+
+}
+
+
+@media (max-width: 460px) {
+
+  h1 {
+    font-size: 36px;
+
+  }
+
+  .sapnu-banka-flex { 
+    margin-top: 60px;
+  }
+
+  .dzeltens-sapnu img {
+    min-width: 320px !important;
+    min-height: 471px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sapnu-banka-text-medium {
+    font-size: 18px;
+    line-height: 21.94px;
+  
+  }
+
+}
+
+@media (max-width: 320px) {
+  
+
+  .video-wrap1 .play-btn img,
+  .video-wrap1 .play-btn {
+    width: 50px;
+    height: 48px;
+  }
+
+  .sapnu-banka-flex img {
+    max-width: 118px;
+  }
+
+  .sapnu-banka-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.63px;
+  }
+
+  .text-size0 {
+    padding-top: 25px;
+  }
+
+  .sapnubanka .footer-wrapper-margin { 
+    margin-top: 500px;
+  }
+
+
+}
+
+
 /*Sapnu banka lapa end */
 
 
-
-
-/*try*/
- /* Just a parent container for the videos */
- .videos {
-  margin: 20px auto;
-  max-width: 1366px;
-}
-/* Individual video container */
-.video-wrap1 {
-  position: relative;
-  max-width: 1366px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-/* video poster frame or placeholder image */
-.video-wrap1 .placeholder {
-  max-width: 1366px;
-  width: 100%;
-}
-/* SVG play button container */
-.video-wrap1 .play-btn {
-  position: absolute;
-  max-width: 700px;
-  width: 86px;
-  height: 83px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* adjust your icon size, add different breakpoints as needed */
-@media screen and (max-width: 600px) {
-  .video-wrap1 .play-btn {
-    width: 70px;
-    height: 70px;
-  }
-}
-/*try*/
 
 
