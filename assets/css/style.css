@@ -1358,15 +1358,19 @@ transform: rotate(-180deg);
     line-height: 35.57px;
     text-align: center;
     display: block;
-    max-width: 818px;
-    max-height: 108px;
+    max-width: 1366px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 0px;
     color: white;
+    bottom: 84px;
 }
 
 q {
+  max-width: 818px;
   margin: 0 auto;
+  display: block;
+ 
 }
 
 .atzinas {
