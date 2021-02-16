@@ -28,7 +28,7 @@
 }
 
 body {
-  background-color: green;
+  background-color: white;
 }
 
 header {
@@ -317,6 +317,8 @@ section {
     width: 50px;
     top: 25%;
   }
+
+
 
 }
 
@@ -659,7 +661,7 @@ section {
       margin-bottom: 0;
   }
 
-  .button {
+  .cta-wrapper .button {
       margin-top: 30px;
   }
 
@@ -844,6 +846,10 @@ input[type="checkbox"] {
       font-weight: 400;
       font-size: 14px;
       line-height: 21.94px;
+  }
+
+  .email-wrapper h2 {
+    font-size: 24px;
   }
 
   .form-input form {
@@ -1309,7 +1315,8 @@ h1 {
     display: block;
     margin: 0 auto;
     margin-top: 85px;
-    margin-bottom: 60px;  /* universal attribute, visiem h1 */
+    margin-bottom: 60px;
+    color: #2f4858;  /* universal attribute, visiem h1 */
 }
 
 
@@ -1465,25 +1472,28 @@ polyline {
   display: block;
   max-width: 818px;
   text-align: center;
-  
+  color: #2f4858;
 }
 
 .cta-wrapper-sapnis {
   margin-top: 90px;
   margin-bottom: 140px;
-  margin-inline: 168px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 242px;
   display: flex;
   margin-block: 150px;
   text-align: center;
   
 }
 
+
+
 .cta-wrapper-sapnis p {
   font-family: montserrat-regular;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.94px;
+  color: #2f4858;
 }
 
 .cta-wrapper-inner1-sapnis, .cta-wrapper-inner2-sapnis {
@@ -1502,7 +1512,111 @@ polyline {
   margin-top: 143px;
 }
 
+@media only screen and (max-width: 1280px) {
+  .cta-wrapper-sapnis {
+    gap: 60px;
+  }
+}
 
+@media only screen and (max-width: 960px) {
+  .cta-wrapper-sapnis {
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+  }
+
+  .cta-wrapper-inner1-sapnis, .cta-wrapper-inner2-sapnis, .cta-wrapper-inner3-sapnis {
+    max-width: 608px;
+  }
+
+  .cta-wrapper-inner1-sapnis .button {
+    margin-top: 50px;
+  }
+
+  .textsapnis {
+    max-width: 608px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-wrapper-margin {
+    margin-top: 455px;
+  }
+}
+
+
+@media only screen and (max-width: 680px) {
+  .cta-wrapper-inner1-sapnis, .cta-wrapper-inner2-sapnis, .cta-wrapper-inner3-sapnis {
+    max-width: 400px;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .piesakisapni .gallery-item1 {
+    max-width: 240.5px;
+}
+
+.piesakisapni .gallery-item2 {
+    max-width: 240px;
+}
+
+.piesakisapni .gallery-item4 {
+    max-width: 295px;
+}
+
+.piesakisapni .gallery-item3 {
+    max-width: 240px;
+    align-self: flex-end;
+}
+
+.footer-wrapper-margin {
+  margin-top: 500px;
+}
+
+}
+
+@media only screen and (max-width: 450px) {
+  .cta-wrapper-sapnis p {
+    font-size: 16px;
+  }
+
+  
+}
+
+@media only screen and (max-width: 425px) {
+  .cta-wrapper-sapnis p {
+    font-size: 12px;
+    line-height: 14.63px;
+
+  }
+
+  .cta-wrapper-inner1-sapnis, .cta-wrapper-inner2-sapnis, .cta-wrapper-inner3-sapnis {
+    max-width: 280px;
+  }
+
+  .cta-wrapper-sapnis {
+    gap: 80px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    max-width: 280px;
+    font-size: 36px;
+  }
+
+  .cta-wrapper-sapnis h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .footer-wrapper-margin {
+    margin-top: 700px;
+  }
+  
+}
 
 /*Piesaki sapni lapa end*/
 
