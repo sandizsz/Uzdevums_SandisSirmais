@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="lv">
+    <head>
+        <title>SparkleHeart</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel='icon' href='assets/img//Intersect.svg' type='image/x-icon' />
+        <link rel="stylesheet" href="assets/css/normalize.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        
+        <script
+        src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
+        data-auto-a11y="true"></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+
+        <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwz_8OxIGhS_nOIPS2F_mH1ie5WfmhZ0&map_ids=e24b393c59b842b4&callback=initMap" async defer>
+                </script>
+                
+        <script src='assets/js/theme.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.js" integrity="sha512-Rc24PGD2NTEGNYG/EMB+jcFpAltU9svgPcG/73l1/5M6is6gu3Vo1uVqyaNWf/sXfKyI0l240iwX9wpm6HE/Tg==" crossorigin="anonymous"></script>
+
+        
+        
+    </head>
+
+    <body class="sapnusatbalsta">
+
+
+        <div class="container">
+            <header>
+                <nav>
+                    <input type="checkbox" id="check" />
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <label class="logo">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/img/BlackLogo 3.svg" alt="Sparkle Logo" /></a>
+                        </div>
+                    </label>
+                    <ul id="nav">
+                        <li>
+                            <div class="nav-flex-items"><a href="#">LV</a><a href="#">EN</a><a href="#">RU</a></div>
+                        </li>
+                        <li><a href="ideja.html">Ideja</a></li>
+                        <li><a href="piesakisapni.html">Piesaki sapni</a></li>
+                        <li><a href="uznemejiem.html">Uzņēmējiem</a></li>
+                        <li><a href="sapnubanka.html">Sapņu banka</a></li>
+                        <li><a href="#">Sapņus atbalsta</a></li>
+                        <li><a href="#">99 iedvesmas stāsti</a></li>
+                        <li>
+                            <a href="#">
+                                <div class="dropdown" style="float: right;">
+                                    <button class="dropbtn">LV</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">RU</a>
+                                        <a href="#">EN</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <div class="divider"><img src="assets/img/istaisvector.svg" alt="" /></div>
+
+               
+            </header>
+  
+            <main>
+                <div>
+                    <h1>SAPŅUS ATBALSTA</h1>
+
+                    <p class="text-uznemejiem">
+                        Sadarbības partneri ir uzņēmumi, kuri savā preču vai pakalpojumu ikdienā ir integrējuši SparkleHeart zīmolu un dala ar to konkrētu daļu savu ienākumu.
+                    </p>
+
+                    <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+                </div>
+                
+                
+                
+
+                <div>
+                    
+                    <!-- Drop-Down Filter Menu -->
+                    <select id="type" onchange="filterMarkers(this.value);">
+                    <option value="">Please select category</option>
+                    <option value="Branch">Branch</option>
+                    <option value="ATM">ATM</option>
+                    <option value="Drive-Thru">Drive-Thru</option>
+                    <!--Add more "options" for the dropdown menu-->
+                    </select>
+                   
+                <div id="map-canvas"></div>
+                </div>
+             
+                
+              
+  
+                  
+
+            </main>
+
+            <footer>
+                <div class="footer-wrapper footer-wrapper-margin">
+                    
+
+                    <div class="wrap-zils">
+                        <div class="zilsfooter"><img src="assets/img/Unionfooter.svg" alt="" /></div>
+
+                        <div class="wrap-teksts">
+                            <div class="wrap-augsa">
+                                <div class="zils-div1">
+                                    <img src="assets/img/GoldenV2Logo 3.svg" alt="SparkleLogo_Gold" />
+                                    <p class="footer-paragraph-big neredzams">Juris Gogulis</p>
+                                </div>
+
+                                <div class="zils-div2 redzams2">
+                                    <ul class="footer-ul1">
+                                        <li><a href="ideja.html">Ideja</a></li>
+                                        <li><a href="piesakisapni.html">Piesaki sapni</a></li>
+                                        <li><a href="uznemejiem.html">Uzņēmējiem</a></li>
+                                        <li><a href="#">Sapņu banka</a></li>
+                                        <li><a href="#">Sapņus atbalsta</a></li>
+                                        <li><a href="#">Iedvesmas stāsti</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="zils-div3 redzams1">
+                                    <p class="footer-paragraph-big">Biedrība SparkleHeart</p>
+                                    <ul class="footer-text1">
+                                        <li>Reģistrācijas nr. 40008293119</li>
+                                        <li>Banka: SWEDBANK A/S</li>
+                                        <li>LV52HABA0551047652465</li>
+                                    </ul>
+                                </div>
+
+                                <div class="zils-div4">
+                                    <p class="footer-paragraph-big redzams2">Juris Gogulis</p>
+                                    <ul class="footer-text1">
+                                        <li>juris.gogulis@sparkleheart.org</li>
+                                        <li>+37126890034</li>
+                                        <li>Biķernieku iela 24a - 5, LV-1006</li>
+                                        <a href="">
+                                            <li class="neredzams"><b class="bold">Skatīt rekvizītus</b></li>
+                                        </a>
+                                    </ul>
+
+                                    <div class="zils-div4-inner">
+                                        <a href="#"><img src="assets/img/fb.svg" alt="Facebook_icon" /></a>
+                                        <a href="#"><img src="assets/img/ig.svg" alt="Instagram_icon" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wrap-apaksa">
+                            <div class="zils-div5">
+                                <p class="footer-paragraph-small1">
+                                    © SparkleHeart 2020. <br class="redzams2" />
+                                    Visas tiesības aizsargātas.
+                                </p>
+                            </div>
+
+                            <div class="zils-div6">
+                                <a href="#"><p class="footer-paragraph-small2">Privātuma politika</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

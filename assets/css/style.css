@@ -1979,5 +1979,17 @@ font-family: montserrat-regular;
 /*Sapnu banka lapa end */
 
 
+/* Sapnus atbalsta lapa start */
+#map-canvas {
+  width: 100%;
+  height: 648px;
+}
+
+.sapnusatbalsta .footer-wrapper-margin {
+  margin-top: 0px;
+}
+
+/* Sapnus atbalsta lapa end * /
+
 
 
