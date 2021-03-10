@@ -1981,6 +1981,7 @@ font-family: montserrat-regular;
 
 /* Sapnus atbalsta lapa start */
 #map-canvas {
+  max-width: 1366px;
   width: 100%;
   height: 648px;
 }
@@ -1989,7 +1990,285 @@ font-family: montserrat-regular;
   margin-top: 0px;
 }
 
+
+.sapnusatbalstatop, .dropdownmap, .uznemumi-edinasana {
+  margin-inline: min(80px, 80px);
+}
+
+.dropdownmap {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 90px;
+  margin-bottom: 60px;
+}
+
+.dropdownmap .text-uznemejiem {
+  text-align: left;
+  color: #FFA800;
+}
+
+.dropdownmap select {
+  width: 288px;
+  background: #C4C4C4 40%;
+  height: 43px;
+  border: 0px;
+  padding: 13px 15px 12px 15px;
+  border-radius: 6px;
+  outline: none;
+  
+  
+}
+
+.dropdownmap select option{
+  border-radius: 6px;
+}
+
+.mapselect1 select option:hover {
+  font-weight: 1000;
+  background-color: yellow;
+}
+
+#infowindow {
+  background: rgba(255, 168, 0, 0.5);
+  display: flex;
+  gap: 38px;
+  padding: 22px 27px 25px 30px;
+  
+}
+
+#infowindow p, .uznemumi-edinasana p {
+  font-family: montserrat-regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.94px;
+  text-align: right;
+}
+
+.infouznemums {
+  text-align: right;
+}
+
+.AuchUznemums-child1 p {
+  padding-top: 30px;
+}
+
+.gm-style-iw-d  {
+  overflow: hidden !important;
+  border-radius: 14px;
+}
+
+.gm-style-iw {
+  padding: 0 !important;
+  overflow: visible !important;
+}
+.gm-style-iw-t::after {
+  display: none;
+}
+
+.gm-style .gm-style-iw-c {
+  background: none;
+  border-radius: 14px;
+}
+
+.uznemumi-edinasana {
+  margin-top: 150px;
+  margin-bottom: 60px;
+  margin-inline: 271.5px
+}
+
+@media (max-width: 1100px) {
+  .uznemumi-edinasana {
+    margin-inline: 80px;
+    
+  }
+
+  .uznemumi-edinasana img {
+    max-width: 98px;
+  }
+}
+
+@media (max-width: 768px) {
+  #map-canvas {
+    height: 812px;
+  }
+
+
+}
+
+@media (max-width: 610px) {
+  #map-canvas {
+    height: 606px;
+  }
+
+
+}
+
+.uznemumi-edinasana div:nth-child(2) {
+  margin-top: 33px;
+}
+
+.uznemumi-edinasana-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
 /* Sapnus atbalsta lapa end * /
 
 
 
+/* 99 stasti start */
+
+
+
+
+
+
+
+button {
+  cursor: pointer;
+}
+
+#portfolio {
+  margin-inline: 168px;
+  margin-top: 150px;
+  max-width: 160px;
+  width: 100%;
+  height: 2930px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(160px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 14px;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+}
+.project img {
+  position: absolute;
+}
+.project p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+}
+.project .grid__title {
+  font-family: oswald-medium;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53.35px;
+  text-align: right;
+  color: white;
+  position: absolute;
+  width: 100%;
+  right: 14px;
+  bottom: -15px;
+  z-index: 3;
+  text-transform: uppercase;
+}
+
+.project:hover .grid__overlay {
+  transform: translateY(0%);
+}
+
+.over {
+  opacity: 0.6;
+}
+
+.grid__overlay {
+  background: url(/assets/img/zelts.png);
+  height: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transform: translateY(101%);
+  transition: all 0.3s ease-in-out;
+}
+
+.viewbutton {
+  font-family: montserrat-regular;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35.57px;
+  text-align: center;
+  color: white;
+}
+
+.grid__overlay button {
+  background: none;
+  outline: none;
+  font-weight: 100;
+  letter-spacing: 2px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.grid__overlay button:hover {
+  transition: all 0.3s ease-in-out;
+  background: #ffffff;
+  color: #D1A39E;
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: fixed;
+  background: rgba(71, 69, 69, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 3;
+}
+
+.overlay.open {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.overlay__inner {
+  background: #ffffff;
+  width: 700px;
+  padding: 20px;
+  position: relative;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  background: none;
+  outline: 0;
+  color: #474545;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.close:hover {
+  color: #D1A39E;
+}
+
+.project__image {
+  margin-left: -1.2px;
+}
+
+.jaunsstasts {
+  font-family: oswald-medium;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26.68px;
+  text-align: center;
+  color: white;
+
+}
