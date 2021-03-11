@@ -2182,7 +2182,7 @@ button {
 
 .grid__overlay {
   cursor: pointer;
-  background-image: url('assets/img/zelts.jpg');
+  background: url('/assets/img/zelts.jpg');
   height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
@@ -2222,13 +2222,17 @@ button {
 
 .overlay {
   position: fixed;
-  background: rgba(71, 69, 69, 0.7);
+  background: rgba(47, 72, 88, 0.9);
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   display: none;
   z-index: 3;
+}
+
+.arta {
+  display: none;
 }
 
 .overlay.open {
@@ -2238,8 +2242,6 @@ button {
 }
 
 .overlay__inner {
-  background: #ffffff;
-  width: 700px;
   padding: 20px;
   position: relative;
   opacity: 1;
@@ -2247,17 +2249,18 @@ button {
 
 .close {
   position: absolute;
-  top: 3px;
-  right: 10px;
+  font-family: montserrat-regular;
+  font-size: 30px;
+  top: -25px;
+  right: -45px;
   background: none;
   outline: 0;
-  color: #474545;
+  color: white;
   border: 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 .close:hover {
-  color: #D1A39E;
+  color: #ffa800;
 }
 
 .project__image {
@@ -2273,3 +2276,36 @@ button {
   color: white;
 
 }
+
+.video-wrap-iedvesmasstasti {
+  position: relative;
+  max-width: 911px;
+  width: 100%;
+  
+}
+/* video poster frame or placeholder image */
+ .placeholder-iedvesmasstasti {
+  max-width: 911px;
+  width: 100%;
+}
+/* SVG play button container */
+.video-wrap-iedvesmasstasti .play-btn-iedvesmasstasti {
+  position: absolute;
+  max-width: 700px;
+  width: 86px;
+  height: 83px;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay_text {
+  margin-top: 36px;
+  font-family: oswald-medium;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 53.35px;
+  text-align: center;
+  color: white;
+}
+
