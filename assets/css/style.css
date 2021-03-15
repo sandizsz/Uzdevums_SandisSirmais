@@ -2309,3 +2309,61 @@ button {
   color: white;
 }
 
+
+
+/* Komanda start */
+
+.komanda {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.komanda h3:nth-child(1){
+  font-size: 30px;
+  line-height: 44.46px;
+  margin-bottom: 30px;
+}
+
+
+.komanda-foto {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 168px;
+}
+
+.komanda-foto-teksts {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  z-index: 3;
+}
+
+.komanda-foto-teksts h3, 
+.komanda-foto-teksts p {
+  color: #ffffff;
+}
+
+.komanda-foto-teksts p {
+  font-family: montserrat-regular;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.94px;
+}
+
+.komanda-foto-child {
+  position: relative;
+  max-height: 365px;
+}
+
+.komanda-foto-img::after {
+  content:'';
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
+  display:inline-block;
+  background: linear-gradient(180deg, rgba(47, 72, 88, 0.8) 18.63%, rgba(47, 72, 88, 0) 49.21%);
+transform: rotate(-180deg);
+}
+
+
+/*Komanda end*/

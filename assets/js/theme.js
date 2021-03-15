@@ -66,7 +66,7 @@ var markerCallback = function() {
         gmarkers1[i].setIcon(icon1);
     }
     this.setIcon(icon2);
-    console.log("iepisu ikonu");
+    
  }
       //var infowindow; // = new google.maps.InfoWindow({
       //    content: ''
@@ -286,28 +286,10 @@ filterMarkers = function (category) {
         ['7', '<div id="infowindow"> <img src = "/assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9680, 24.1750, ['Rīga', 'Izklaide']],
     ];
 
-/*
-const buttons = document.querySelectorAll('.project');
-const overlay = document.getElementsByClassName('.overlay');
-const overlayImage = document.querySelector('.overlay__inner img');
-const project_image = document.getElementsByClassName('.project_image');
 
-function open(e) {
-  overlay.classList.add('open');
-  const src= e.currentTarget.querySelector('img').src;
-  overlayImage.src = src;
-}
-
-function close() {
-  overlay.classList.remove('open');
-}
-
-buttons.forEach(project_image => project_image.addEventListener('click', open));
-overlay.addEventListener('click', close);
-
-*/
 
 const buttons = document.querySelectorAll('.project');
+const button = document.querySelector('.project');
 const overlay = document.querySelector('.overlay');
 const overlayDiv = document.querySelectorAll('.overlay__inner div')[0];
 const overlayDiv1 = document.querySelectorAll('.overlay__inner div')[1];
@@ -315,16 +297,18 @@ const overlayImage = document.querySelectorAll('.overlay__inner img')[0];
 const overlayImage1 = document.querySelectorAll('.overlay__inner img')[1];
 const overlayParagraph = document.querySelector('.overlay__inner p');
 
+$(".project").click(function(event) {
+    $(".project").removeClass("active");
+    $(event.currentTarget).addClass("active");
+});
 
 
-
-
-
-function open(e) {
-  overlay.classList.add('open');
-  const src= e.currentTarget.querySelectorAll('div')[0].className;
+$(".project").on('click' , function open(e) {
+    if ($(".active").find('.video-wrap-iedvesmasstasti').length == 1) {
+        overlay.classList.add('open');
+        const src= e.currentTarget.querySelectorAll('div')[0].className;
   overlayDiv.className = src;
-
+  
   const src1= e.currentTarget.querySelectorAll('div')[1].className;
   overlayDiv1.className = src1;
 
@@ -339,16 +323,23 @@ function open(e) {
 
   const src5= e.currentTarget.querySelector('p').textContent;
   overlayParagraph.textContent = src5;
-}
+    } else {
+  
+    }
+})
+
+
 
 
 function close() {
+
+overlayParagraph.textContent = "";
   overlay.classList.remove('open');
   overlayDiv.classList.remove('video-wrap-iedvesmasstasti');
   overlayDiv.classList.remove('play-btn-iedvesmasstasti');
   overlayImage1.classList.remove('placeholder-iedvesmasstasti');
-  overlayImage.src = overlayImage1;
-  overlayImage1.src = overlayImage1;
+  overlayImage.src = "";
+  overlayImage1.src = "";
 
 }
 
