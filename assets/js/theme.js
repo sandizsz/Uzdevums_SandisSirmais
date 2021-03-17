@@ -286,7 +286,39 @@ filterMarkers = function (category) {
         ['7', '<div id="infowindow"> <img src = "/assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9680, 24.1750, ['Rīga', 'Izklaide']],
     ];
 
+    $(document).ready(function() {
+        // This will fire when document is ready:
+        $(window).resize(function() {
+            // This will fire each time the window is resized:
+            if($(window).width() >= 769) {
+             
+                $('.show-more').hide();
+                $('.project:gt(19)').show();
+                $('.porftolio-wrapper').css('height','');
+                 
+               
+            } 
+    
+            else {
+                $('.show-more').show();
+                $('.project:gt(19)').hide();
+                $('.porftolio-wrapper').css('height','750px');
+            }
+                // if smaller
+                
+        }).resize(); // This will simulate a resize to trigger the initial run.
+    });
 
+
+   
+      
+      $('.show-more').on('click', function() {
+        //toggle elements with class .ty-compact-list that their index is bigger than 2
+        $('.project:gt(19)').toggle();
+        $('.porftolio-wrapper').css('height','auto')
+        //change text of show more element just for demonstration purposes to this demo
+        $(this).text() === 'Show more' ? $(this).text('Show less') : $(this).text('Show more');
+      });
 
 const buttons = document.querySelectorAll('.project');
 const button = document.querySelector('.project');

@@ -1313,7 +1313,7 @@ h1 {
     line-height: 71.14px;
     text-align: center;
     display: block;
-    margin: 0 auto;
+    margin-inline: clamp(20px, 1%, 380px);
     margin-top: 85px;
     margin-bottom: 60px;
     color: #2f4858;  /* universal attribute, visiem h1 */
@@ -1477,6 +1477,7 @@ polyline {
   max-width: 818px;
   text-align: center;
   color: #2f4858;
+  
 }
 
 .cta-wrapper-sapnis {
@@ -2132,9 +2133,10 @@ button {
 }
 
 #portfolio {
-  margin-inline: clamp(160px, 80px, 200px);
+ 
+  max-width: 1030px;
+  margin: 0 auto;
   margin-top: 150px;
-  max-width: 160px;
   width: 100%;
   height: 2930px;
   position: relative;
@@ -2142,6 +2144,27 @@ button {
   grid-template-columns: repeat(6, minmax(160px, 1fr));
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 14px;
+}
+
+
+@media (max-width: 1180px) {
+  #portfolio {
+    grid-gap: 12px;
+    grid-template-columns: repeat(5, minmax(142px, 1fr));
+    max-width: 761px;
+    height: 3080px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 840px) {
+  #portfolio {
+    grid-gap: 12px;
+    grid-template-columns: repeat(4, minmax(142px, 1fr));
+    max-width: 606px;
+    height: 3851px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2318,6 +2341,8 @@ button {
 
 
 
+
+
 /* Komanda start */
 
 .komanda {
@@ -2333,8 +2358,9 @@ button {
 
 .komanda > p:first-of-type {
   color: #2f4858;
-  max-width: 606px;
+
   margin: 0 auto;
+  margin-inline: clamp(20px, 1%, 380px);
 }
 
 
@@ -2349,7 +2375,8 @@ button {
   position: absolute;
   width: 100%;
   bottom: 20px;
-  z-index: 3;
+  z-index: 2;
+  padding-inline: 8px;
 }
 
 .komanda-foto-teksts h3, 
@@ -2379,9 +2406,64 @@ button {
 transform: rotate(-180deg);
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 1220px) {
+  .komanda-foto {
+    margin-inline: 70px;
+  }
+
+}
+
+@media (max-width: 1024px) {
   .komanda-foto {
     flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .komanda-foto img {
+    max-width: 352px;
+    width: 100%;
+    max-height: 443px;
+    height: 100%;
+  }
+
+  .komanda-foto-child {
+    max-height: 443px;
+    height: 100%;
+    max-width: 352px;
+    width: 100%;
+  }
+
+  .komanda-foto-teksts {
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .komanda-foto {
+    margin-inline: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  
+}
+
+@media (max-width: 380px) {
+  .komanda-foto-child {
+    max-height: 354px;
+    height: 100%;
+    max-width: 280px;
+    width: 100%;
+  }
+
+  .komanda-foto-teksts {
+    bottom: 20px;
+  }
+
+  .komanda > p:first-of-type {
+    max-width: 280px;
   }
 }
 
