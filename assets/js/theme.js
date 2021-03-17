@@ -294,7 +294,7 @@ filterMarkers = function (category) {
              
                 $('.show-more').hide();
                 $('.project:gt(19)').show();
-                $('.porftolio-wrapper').css('height','');
+
                  
                
             } 
@@ -302,7 +302,6 @@ filterMarkers = function (category) {
             else {
                 $('.show-more').show();
                 $('.project:gt(19)').hide();
-                $('.porftolio-wrapper').css('height','750px');
             }
                 // if smaller
                 
@@ -310,14 +309,15 @@ filterMarkers = function (category) {
     });
 
 
+
+
    
       
       $('.show-more').on('click', function() {
         //toggle elements with class .ty-compact-list that their index is bigger than 2
         $('.project:gt(19)').toggle();
-        $('.porftolio-wrapper').css('height','auto')
         //change text of show more element just for demonstration purposes to this demo
-        $(this).text() === 'Show more' ? $(this).text('Show less') : $(this).text('Show more');
+        $(this).text() === 'Skatīt vairāk' ? $(this).text('Skatīt mazāk') : $(this).text('Skatīt vairāk');
       });
 
 const buttons = document.querySelectorAll('.project');
