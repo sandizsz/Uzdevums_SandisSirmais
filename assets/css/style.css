@@ -2285,6 +2285,7 @@ button {
 
 .overlay.open {
   display: grid;
+  overflow: scroll;
   align-items: center;
   justify-items: center;
 }
