@@ -2285,7 +2285,7 @@ button {
 
 .overlay.open {
   display: grid;
-  overflow: scroll;
+  overflow-y: scroll;
   align-items: center;
   justify-items: center;
 }
@@ -2293,7 +2293,7 @@ button {
 .overlay__inner {
   padding: 45px 25px;
   position: relative;
-  top: 50%;
+  top: 35%;
   opacity: 1;
 }
 
