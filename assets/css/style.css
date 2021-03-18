@@ -354,7 +354,7 @@ header section {
   color: white;
   border: none;
   cursor: pointer;
-  z-index: 1;
+  z-index: 4;
   outline: none;
   border-radius: 10px;
 
@@ -910,9 +910,8 @@ input[type="checkbox"] {
 .wrap-apaksa {
   display: flex;
   position: relative;
-  padding-inline: 4.54%;
   justify-content: space-between;
-  padding-top: 5px;
+  padding: 5px 4.54%;
   align-items: flex-end;
 }
 
@@ -2132,6 +2131,10 @@ button {
   cursor: pointer;
 }
 
+.portfolio-wrapper .div-center {
+  text-align: center;
+}
+
 #portfolio {
  
   max-width: 1030px;
@@ -2270,7 +2273,7 @@ button {
   bottom: 0;
   left: 0;
   display: none;
-  z-index: 3;
+  z-index: 5;
 }
 
 .arta {
