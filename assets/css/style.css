@@ -2290,7 +2290,7 @@ button {
 }
 
 .overlay__inner {
-  padding: 20px;
+  padding: 45px 25px;
   position: relative;
   opacity: 1;
 }
@@ -2299,8 +2299,8 @@ button {
   position: absolute;
   font-family: montserrat-regular;
   font-size: 30px;
-  top: -25px;
-  right: -45px;
+  top: -27px;
+  right: -19px;
   background: none;
   outline: 0;
   color: white;
@@ -2312,7 +2312,7 @@ button {
 }
 
 .project__image {
-  margin-left: -1.2px;
+  margin-left: -0.8px;
 }
 
 .jaunsstasts {
@@ -2367,6 +2367,36 @@ button {
   }
 
 }
+
+@media (max-width: 850px) {
+  .placeholder-iedvesmasstasti {
+    width: 608px;
+  }
+
+  .overlay__inner {
+    padding: 25px 25px;
+  }
+
+  .close {
+    font-size: 25px;
+  }
+
+}
+
+@media (max-width: 682px) {
+  .placeholder-iedvesmasstasti {
+    width: 500px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .placeholder-iedvesmasstasti {
+    width: 279px;
+  }
+
+}
+
 
 
 
