@@ -2293,6 +2293,7 @@ button {
 .overlay__inner {
   padding: 45px 25px;
   position: relative;
+  top: 50%;
   opacity: 1;
 }
 
