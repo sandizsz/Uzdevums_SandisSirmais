@@ -322,6 +322,7 @@ filterMarkers = function (category) {
 
 const buttons = document.querySelectorAll('.project');
 const button = document.querySelector('.project');
+const body = document.querySelector('body');
 const overlay = document.querySelector('.overlay');
 const overlayDiv = document.querySelectorAll('.overlay__inner div')[0];
 const overlayDiv1 = document.querySelectorAll('.overlay__inner div')[1];
@@ -338,6 +339,7 @@ $(".project").click(function(event) {
 $(".project").on('click' , function open(e) {
     if ($(".active").find('.video-wrap-iedvesmasstasti').length == 1) {
         overlay.classList.add('open');
+        $("body").css('overflow', 'hidden');
         const src= e.currentTarget.querySelectorAll('div')[0].className;
   overlayDiv.className = src;
   
@@ -356,6 +358,7 @@ $(".project").on('click' , function open(e) {
   const src5= e.currentTarget.querySelector('p').textContent;
   overlayParagraph.textContent = src5;
     } else {
+       
   
     }
 })
@@ -364,7 +367,7 @@ $(".project").on('click' , function open(e) {
 
 
 function close() {
-
+    $("body").css('overflow', 'auto');
 overlayParagraph.textContent = "";
   overlay.classList.remove('open');
   overlayDiv.classList.remove('video-wrap-iedvesmasstasti');
@@ -377,3 +380,5 @@ overlayParagraph.textContent = "";
 
 buttons.forEach(button => button.addEventListener('click', open));
 document.querySelector('.close').addEventListener('click', close);
+
+

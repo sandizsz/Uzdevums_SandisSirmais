@@ -2202,6 +2202,7 @@ button {
   position: absolute;
   text-align: center;
   width: 100%;
+  top: 30%;
   z-index: 3;
 }
 .project .grid__title {
@@ -2319,8 +2320,8 @@ button {
   font-weight: 700;
   font-size: 18px;
   line-height: 26.68px;
-  text-align: center;
   color: white;
+  top: 30%;
 
 }
 
@@ -2330,6 +2331,10 @@ button {
   width: 100%;
   
 }
+
+
+
+
 /* video poster frame or placeholder image */
  .placeholder-iedvesmasstasti {
   max-width: 911px;
@@ -2347,7 +2352,7 @@ button {
 }
 
 .overlay_text {
-  margin-top: 36px;
+  margin-top: 25px;
   font-family: oswald-medium;
   font-weight: 500;
   font-size: 36px;
@@ -2356,6 +2361,12 @@ button {
   color: white;
 }
 
+@media (max-width: 1220px) {
+  .placeholder-iedvesmasstasti {
+    width: 800px;
+  }
+
+}
 
 
 
@@ -2375,7 +2386,6 @@ button {
 
 .komanda > p:first-of-type {
   color: #2f4858;
-
   margin: 0 auto;
   margin-inline: clamp(20px, 1%, 380px);
 }
@@ -2434,7 +2444,6 @@ transform: rotate(-180deg);
 @media (max-width: 1024px) {
   .komanda-foto {
     flex-direction: column;
-    gap: 25px;
     align-items: center;
   }
 
@@ -2450,6 +2459,10 @@ transform: rotate(-180deg);
     height: 100%;
     max-width: 352px;
     width: 100%;
+  }
+
+  .komanda-foto-child:not(:last-child) {
+    margin-bottom: 25px;
   }
 
   .komanda-foto-teksts {
