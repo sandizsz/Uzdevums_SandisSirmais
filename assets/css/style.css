@@ -885,8 +885,7 @@ input[type="checkbox"] {
   max-width: 1366px;
   width: 100%;
   display: flex;
-  padding-top: 69px;
-  padding-inline: 4.54%;
+  padding: 69px 4.54% 0;
   position: relative;
   justify-content: space-between;
 }
@@ -911,7 +910,7 @@ input[type="checkbox"] {
   display: flex;
   position: relative;
   justify-content: space-between;
-  padding: 5px 4.54%;
+  padding: 5px 4.54% 0;
   align-items: flex-end;
 }
 
@@ -945,6 +944,9 @@ input[type="checkbox"] {
   font-size: 18px;
   line-height: 21.94px;
   color: white;
+}
+
+.footer-text1 li {
   padding-bottom: 10px;
 }
 
@@ -2382,8 +2384,7 @@ button {
 .komanda-foto {
   display: flex;
   justify-content: space-between;
-  margin-inline: 168px;
-  margin-top: 60px;
+  margin: 60px 168px 0;
 }
 
 .komanda-foto-teksts {
@@ -2424,7 +2425,8 @@ transform: rotate(-180deg);
 
 @media (max-width: 1220px) {
   .komanda-foto {
-    margin-inline: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
   }
 
 }
@@ -2457,7 +2459,8 @@ transform: rotate(-180deg);
 
 @media (max-width: 768px) {
   .komanda-foto {
-    margin-inline: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
