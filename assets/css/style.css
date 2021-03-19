@@ -2346,8 +2346,6 @@ button {
 .video-wrap-iedvesmasstasti .play-btn-iedvesmasstasti {
   position: absolute;
   max-width: 700px;
-  width: 86px;
-  height: 83px;
   left: 50%;
   top: 58%;
   transform: translate(-50%, -50%);
@@ -2385,18 +2383,41 @@ button {
 
 }
 
-@media (max-width: 682px) {
+@media (max-width: 700px) {
   .placeholder-iedvesmasstasti {
     width: 500px;
   }
 
-}
-
-@media (max-width: 320px) {
-  .placeholder-iedvesmasstasti {
-    width: 279px;
+  .play-btn-iedvesmasstasti img {
+    width: 50px;
   }
 
+}
+
+@media (max-width: 700px) {
+  .close {
+    right: 25px;
+    top: -25px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 552px) {
+  .placeholder-iedvesmasstasti {
+    width: 425px;
+  }
+
+
+  @media (max-width: 472px) {
+    .placeholder-iedvesmasstasti {
+      width: 279px;
+    }
+
+    .overlay_text {
+      font-size: 24px;
+    }
+  
+  }
 }
 
 
