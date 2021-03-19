@@ -116,7 +116,7 @@ nav {
   background: white;
   height: 92.51px;
   max-width: 100%;
-  padding-inline: 62px;
+  padding: 0 62px;
 }
 
 nav ul li a {
@@ -200,7 +200,7 @@ header section {
   nav {
       height: 74.01px;
       max-width: 100%;
-      padding-inline: 66px;
+      padding: 0 66px;
   }
 
   .divider img {
@@ -215,7 +215,7 @@ header section {
   nav {
       height: 51.72px;
       max-width: 100%;
-      padding-inline: 15px;
+      padding: 0 15px;
   }
 
   .nav-flex-items a {
@@ -394,7 +394,7 @@ header section {
 
 @media (max-width: 650px) {
   .text {
-    padding-inline: 4%;
+    padding: 0 4%;
     font-size: 16px;
     margin-bottom: 110px;
     margin-top: 110px;
