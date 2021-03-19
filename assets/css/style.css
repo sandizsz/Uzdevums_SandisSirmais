@@ -2533,14 +2533,9 @@ transform: rotate(-180deg);
 
 @media (max-width: 768px) {
   .komanda-foto {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+    margin: 90px 20px 0;
 }
 
-@media (max-width: 500px) {
-  
-}
 
 @media (max-width: 380px) {
   .komanda-foto-child {
@@ -2557,6 +2552,11 @@ transform: rotate(-180deg);
   .komanda > p:first-of-type {
     max-width: 280px;
   }
+
+  .komanda-foto {
+    margin-top: 60px;
+}
+
 }
 
 /*Komanda end*/
