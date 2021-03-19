@@ -2463,7 +2463,7 @@ button {
   width: 100%;
   bottom: 20px;
   z-index: 2;
-  padding-inline: 8px;
+  padding: 0 8px;
 }
 
 .komanda-foto-teksts h3, 
