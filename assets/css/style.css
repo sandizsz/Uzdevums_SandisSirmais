@@ -2536,6 +2536,7 @@ transform: rotate(-180deg);
     margin: 90px 20px 0;
 }
 
+}
 
 @media (max-width: 380px) {
   .komanda-foto-child {
@@ -2564,6 +2565,22 @@ transform: rotate(-180deg);
   line-height: 36px;
 }
 
+}
+
+.footer-wrapper-iedvesmasstasti {
+  margin-top: 193px;
+}
+
+@media (max-width: 768px) {
+  .footer-wrapper-iedvesmasstasti {
+    margin-top: 160px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-wrapper-iedvesmasstasti {
+    margin-top: 420px;
+  }
 }
 
 /*Komanda end*/
