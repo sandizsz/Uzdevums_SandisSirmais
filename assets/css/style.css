@@ -1481,6 +1481,15 @@ polyline {
   
 }
 
+@media (max-width: 320px) {
+  .textsapnis {
+ font-size: 18px;
+ line-height: 22px;
+}
+}
+
+
+
 .cta-wrapper-sapnis {
   margin-top: 90px;
   margin-bottom: 140px;
