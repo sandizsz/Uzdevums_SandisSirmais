@@ -2551,10 +2551,17 @@ transform: rotate(-180deg);
 
   .komanda > p:first-of-type {
     max-width: 280px;
+    font-size: 14px;
+    line-height: 17px;
   }
 
   .komanda-foto {
     margin-top: 60px;
+}
+
+.komanda > h3:first-child {
+  font-size: 24px;
+  line-height: 36px;
 }
 
 }
