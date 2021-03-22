@@ -592,7 +592,7 @@ header section {
 
 .cta-wrapper {
   display: flex;
-  margin-block: 150px;
+  margin: 150px 0;
   justify-content: space-evenly;
 }
 
@@ -620,8 +620,6 @@ header section {
   white-space: nowrap;
   background: #ffa800;
   border-radius: 50.33px;
-  border: 0px solid #444;
-  border-width: 0px 0px 0px 0px;
   color: #fff;
   font-size: 18px;
   font-family: montserrat-regular;
@@ -630,7 +628,7 @@ header section {
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .button:hover, .email-button:hover {
@@ -660,7 +658,7 @@ header section {
 @media (max-width: 600px) {
   .cta-wrapper {
       flex-direction: column;
-      margin-block: 120px;
+      margin: 120px 0;
   }
 
   .cta-wrapper-inner1 h3 {
@@ -1547,7 +1545,7 @@ polyline {
 }
 
 .cta-wrapper-inner1-sapnis .button {
-  margin-top: 143px;
+  margin-top: 153px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -1770,12 +1768,11 @@ font-family: montserrat-regular;
 }
 
 .text-size0 {
-  padding-top: 50px;
+  padding: 50px 20px 0;
 }
 
 .text-size1,
 .text-size0 {
-  max-width: 818px;
   margin: 0 auto;
 }
 
@@ -1832,6 +1829,7 @@ font-family: montserrat-regular;
   width: 100%;
   margin-top: 75px;
   color: white;
+  padding: 0 20px;
 }
 
 .cta-wrapper-sapnubanka {
@@ -1930,7 +1928,10 @@ font-family: montserrat-regular;
   
   .sapnu-banka-flex > * {
     flex-direction: column;
-    gap: 25px;
+  }
+
+  .sapnu-banka-flex p {
+    margin-top: 25px;
   }
 
   .sapnu-banka-flex img {
@@ -1971,14 +1972,14 @@ font-family: montserrat-regular;
   }
 
   .cta-wrapper-sapnubanka {
-    gap: 60px;
+
     flex-direction: column;
     align-items: center;
     margin-bottom: 120px;
   }
 
-  .sapnu-banka-text-medium {
-    padding-inline: min(20px, 5%, 50px);
+  .cta-wrapper-sapnubanka > div:not(:last-child) {
+    margin-bottom: 60px;
   }
 
 }
