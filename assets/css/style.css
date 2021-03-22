@@ -689,6 +689,7 @@ header section {
   color: #2f4858;
   line-height: 44.46px;
   text-align: center;
+  padding: 0 20px;
 }
 
 .email-wrapper {
@@ -699,6 +700,7 @@ header section {
   max-width: 612px;
   margin: 0 auto;
   margin-top: 55px;
+  padding: 0 20px;
 }
 
 .form-input form {
@@ -844,7 +846,6 @@ input[type="checkbox"] {
   }
 
   .form-input {
-      margin: 0 10%;
       margin-top: 30px;
   }
 }
@@ -866,10 +867,6 @@ input[type="checkbox"] {
 
   .form-input input {
       height: 35px;
-  }
-
-  .form-input {
-      margin-inline: 20px;
   }
 
   .form-input form textarea {
