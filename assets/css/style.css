@@ -836,7 +836,7 @@ input[type="checkbox"] {
   }
 
   .form-input {
-      margin-inline: 10%;
+      margin: 0 10%;
       margin-top: 30px;
   }
 }
