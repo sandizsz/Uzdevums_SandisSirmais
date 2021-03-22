@@ -2243,7 +2243,7 @@ button {
 
 .grid__overlay {
   cursor: pointer;
-  background: url('Uzdevums_SandisSirmais/assets/img/zelts.jpg');
+  background-image: url('./img/zelts.jpg');
   height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
