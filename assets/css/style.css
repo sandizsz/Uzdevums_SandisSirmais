@@ -489,6 +489,14 @@ header section {
       height: 24px;
       object-fit: cover;
   }
+
+  #topBtn {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
