@@ -1689,7 +1689,7 @@ font-family: montserrat-regular;
 
 }
 
-.sapnu-banka-flex:not(:last-child) {
+.sapnu-banka-flex > div:not(:last-child) {
   margin-bottom: 106px;
 }
 
@@ -1706,16 +1706,22 @@ font-family: montserrat-regular;
   display: inline-flex;
   text-align: left;
   align-items: center;
-  gap: 62px;
 
+}
+
+.sapnu-banka-flex-item1 img,
+.sapnu-banka-flex-item3 img {
+  padding-right: 62px;
+}
+
+.sapnu-banka-flex-item2 img {
+  padding-right: 67px;
 }
 
 .sapnu-banka-flex-item2 {
   display: inline-flex;
   text-align: right;
   align-items: center;
-  gap: 67px;
-
 }
 
 .sapnu-banka-text {
@@ -1802,11 +1808,15 @@ font-family: montserrat-regular;
     margin-top: 60px;
     margin-bottom: 150px;
     justify-content: center;
-    gap: 241px;
     display: flex;
     text-align: center;
     align-items: baseline;
+    padding: 0 20px;
     
+}
+
+.cta-wrapper-sapnubanka > div:first-child {
+  padding-right: 241px;
 }
 
 .cta-wrapper-sapnubanka img {
@@ -1829,8 +1839,8 @@ font-family: montserrat-regular;
     min-height: 471px;
   }
 
-  .cta-wrapper-sapnubanka {
-    gap: 30px;
+  .cta-wrapper-sapnubanka > div:first-child {
+    padding-right: 30px;
   }
 
   .sapnu-banka-flex-item1 .sapnu-banka-text, 
