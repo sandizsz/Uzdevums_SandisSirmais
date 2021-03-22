@@ -1685,9 +1685,12 @@ font-family: montserrat-regular;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 106px;
   margin-top: 90px;
 
+}
+
+.sapnu-banka-flex:not(:last-child) {
+  margin-bottom: 106px;
 }
 
 .sapnu-banka-flex-item1 .sapnu-banka-text, 
@@ -2240,7 +2243,7 @@ button {
 
 .grid__overlay {
   cursor: pointer;
-  background: url('assets/img/zelts.jpg');
+  background: url('Uzdevums_SandisSirmais/assets/img/zelts.jpg');
   height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
