@@ -513,7 +513,7 @@ header section {
 
 .divider1 img,
 .divider2 img {
-    width: 480px;
+    width: 775px;
     height: 36px;
     object-fit: cover;
 }
@@ -556,14 +556,10 @@ header section {
 
   .divider1 img,
   .divider2 img {
-      width: 320px;
       height: 24px;
       object-fit: cover;
   }
 
-  .divider1 {
-      height: 31px;
-  }
 
   .gallery-item1 {
       max-width: 168px;
