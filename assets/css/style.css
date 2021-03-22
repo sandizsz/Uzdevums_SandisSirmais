@@ -1715,7 +1715,7 @@ font-family: montserrat-regular;
 }
 
 .sapnu-banka-flex-item2 img {
-  padding-right: 67px;
+  padding-left: 67px;
 }
 
 .sapnu-banka-flex-item2 {
@@ -1907,8 +1907,8 @@ font-family: montserrat-regular;
     max-width: 145px;
   }
 
-  .sapnu-banka-flex {
-    gap: 60px;
+  .sapnu-banka-flex > div:not(:last-child) {
+    margin-bottom: 60px;
   }
 
   .sapnu-banka-text {
@@ -1929,7 +1929,7 @@ font-family: montserrat-regular;
 }
 
 .sapnu-banka-flex-item2 img {
-  padding-right: 0;
+  padding-left: 0;
 }
 
   .sapnubanka-h3 {
