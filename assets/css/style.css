@@ -1654,8 +1654,16 @@ font-family: montserrat-regular;
   line-height: 21.94px;
   margin: 0 auto;
   display: block;
-  max-width: 810px;
   text-align: center;
+  padding: 0 20px;
+}
+
+@media (max-width: 425px) {
+  .text-uznemejiem {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
 }
 /* uznemejiem lapa end*/
 
