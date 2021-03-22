@@ -1922,6 +1922,16 @@ font-family: montserrat-regular;
     flex-direction: column-reverse;
   }
 
+  
+.sapnu-banka-flex-item1 img,
+.sapnu-banka-flex-item3 img {
+  padding-right: 0;
+}
+
+.sapnu-banka-flex-item2 img {
+  padding-right: 0;
+}
+
   .sapnubanka-h3 {
     margin-top: 120px;
   }
