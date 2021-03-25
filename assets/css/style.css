@@ -228,7 +228,7 @@ header section {
   
 }
 
-@media (max-width: 425px) {
+@media (max-width: 550px) {
   nav {
     height: 52px;
   }
@@ -660,7 +660,6 @@ header section {
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
-  margin-top: 60px;
 }
 
 .button:hover, .email-button:hover {
@@ -1579,8 +1578,12 @@ polyline {
   margin-bottom: 30px;
 }
 
-.cta-wrapper-inner1-sapnis .button {
-  margin-top: 153px;
+.cta-wrapper-inner1-sapnis p {
+  margin-bottom: 153px;
+}
+
+.cta-wrapper-inner2-sapnis p {
+  margin-bottom: 60px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -1600,12 +1603,17 @@ polyline {
     max-width: 608px;
   }
 
-  .cta-wrapper-inner1-sapnis .button {
-    margin-top: 50px;
-  }
 
   .textsapnis {
     max-width: 608px;
+  }
+
+  .cta-wrapper-inner1-sapnis p {
+    margin-bottom: 50px;
+  }
+  
+  .cta-wrapper-inner2-sapnis p {
+    margin-bottom: 50px;
   }
 
 }
@@ -2091,21 +2099,29 @@ font-family: montserrat-regular;
 }
 
 
-.sapnusatbalstatop, .dropdownmap, .uznemumi-edinasana {
-  margin-inline: min(80px, 80px);
-}
 
 .dropdownmap {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-top: 90px;
-  margin-bottom: 60px;
+  margin: 90px 0 60px;
 }
-
-.dropdownmap .text-uznemejiem {
+.dropdownmap_text {
+  font-family: montserrat-regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.94px;
+  margin: 0 auto;
+  display: block;
   text-align: left;
   color: #FFA800;
+  padding-bottom: 15px;
+
+}
+
+
+
+.mapselect1 {
+  padding-right: 30px;
 }
 
 .dropdownmap select {
@@ -2195,6 +2211,21 @@ font-family: montserrat-regular;
 
   .appendix {
     display: none;
+  }
+
+}
+
+@media (max-width: 650px) {
+  .dropdownmap {
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0;
+  }
+
+
+  .mapselect1 {
+    padding-right: 0;
+    padding-bottom: 40px;
   }
 
 }
