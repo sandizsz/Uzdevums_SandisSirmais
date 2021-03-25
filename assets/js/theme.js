@@ -154,28 +154,6 @@ var markerCallback = function() {
           
       } 
 
-    
-      
-
- $(document).ready(function() {
-    // This will fire when document is ready:
-    $(window).resize(function() {
-        // This will fire each time the window is resized:
-        if($(window).width() >= 768) {
-            // if larger or equal
-            $(".appendix").css('display', 'block');
-            
-        } 
-
-        else {
-            // if smaller
-            $(".appendix").css('display', 'none');
-
-            
-            
-        }
-    }).resize(); // This will simulate a resize to trigger the initial run.
-});
       
 $(document).ready(function() {
     // dropdown funkcija priekš option filtra

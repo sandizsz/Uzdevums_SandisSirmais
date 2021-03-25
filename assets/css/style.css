@@ -114,9 +114,12 @@ nav ul li {
 
 nav {
   background: white;
-  height: 92.51px;
-  max-width: 100%;
+  height: 84.51px;
+  max-width: 1366px;
+  width: 100%;
   padding: 0 62px;
+  position: relative;
+  z-index: 2;
 }
 
 nav ul li a {
@@ -128,10 +131,20 @@ nav ul li a {
 }
 
 .divider img {
-  margin-top: -7.44px;
   position: relative;
-  z-index: 0;
-  width: 1366px;
+  z-index: 1;
+  object-fit: cover;
+  max-width: 1366px;
+  width: 100%;
+  top: 85px;
+}
+
+.homepage {
+  position: absolute;
+}
+
+.homepage_video {
+  margin-top: 47px;
 }
 
 .logo {
@@ -144,9 +157,6 @@ nav ul li a {
       margin-left: 4px;
   }
 
-  .divider img {
-      margin-top: -13px;
-  }
 
   
 }
@@ -154,6 +164,14 @@ nav ul li a {
 @media (max-width: 1128px) {
   .checkbtn {
       display: block;
+  }
+
+  nav {
+    height: 70px;
+  }
+
+  .divider img {
+    top: 70px;
   }
 
   nav img {
@@ -173,7 +191,7 @@ nav ul li a {
       width: 100%;
       height: 100vh;
       background: white;
-      top: 80px;
+      top: 68px;
       left: -100%;
       text-align: center;
   }
@@ -199,7 +217,6 @@ header section {
 @media (max-width: 768px) {
   nav {
       height: 74.01px;
-      max-width: 100%;
       padding: 0 20px;
   }
 
@@ -211,11 +228,22 @@ header section {
   
 }
 
+@media (max-width: 425px) {
+  nav {
+    height: 52px;
+  }
+
+  .divider img {
+    top: 52px;
+  }
+
+}
+
 @media (max-width: 320px) {
   nav {
-      height: 51.72px;
-      max-width: 100%;
+      height: 40.72px;
       padding: 0 15px;
+      width: 320px;
   }
 
   .nav-flex-items a {
@@ -234,7 +262,7 @@ header section {
   }
 
   nav ul {
-      top: 52px;
+      top: 47px;
   }
 
   
@@ -242,7 +270,9 @@ header section {
  
 
   .divider img {
-      min-height: 19.53px;
+      height: 19.53px;
+      width: 320px;
+      top: 35px;
   }
 
   nav img {
@@ -261,6 +291,8 @@ header section {
 .video-wrap {
   z-index: -1;
 }
+
+
 
 .video {
   position: relative;
@@ -1130,6 +1162,9 @@ input[type="checkbox"] {
   .zilsfooter img {
       margin-top: -20px;
   }
+  .zilsfooter {
+    width: 320px;
+  }
 
   .footer-paragraph-small1,
   .footer-paragraph-small2 {
@@ -1702,8 +1737,6 @@ font-family: montserrat-regular;
 .video-wrap1 .play-btn {
   position: absolute;
   max-width: 700px;
-  width: 86px;
-  height: 83px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -2160,6 +2193,9 @@ font-family: montserrat-regular;
     height: 812px;
   }
 
+  .appendix {
+    display: none;
+  }
 
 }
 
