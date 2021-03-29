@@ -7,11 +7,12 @@
         <link rel='icon' href='assets/img//Intersect.svg' type='image/x-icon' />
         <link rel="stylesheet" href="assets/css/normalize.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
+        <link href="assets/css/hamburgers.css" rel="stylesheet">
         <script
         src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
         data-auto-a11y="true"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-        <script src='assets/js/theme.js'></script>
+        
     </head>
 
     <body>
@@ -20,10 +21,11 @@
         <div class="container">
             <header>
                 <nav>
-                    <input type="checkbox" id="check" />
-                    <label for="check" class="checkbtn">
-                        <i class="fas fa-bars"></i>
-                    </label>
+                    <button class="hamburger hamburger--spin" type="button">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                      </button>
                     <label class="logo">
                         <div class="logo">
                             <a href="index.html"><img src="assets/img/BlackLogo 3.svg" alt="Sparkle Logo" /></a>
@@ -38,7 +40,7 @@
                         <li><a href="uznemejiem.html">Uzņēmējiem</a></li>
                         <li><a href="sapnubanka.html">Sapņu banka</a></li>
                         <li><a href="sapnusatbalsta.html">Sapņus atbalsta</a></li>
-                        <li><a href="iedvesmasstasti">99 iedvesmas stāsti</a></li>
+                        <li><a href="iedvesmasstasti.html">99 iedvesmas stāsti</a></li>
                         <li>
                             <a href="#">
                                 <div class="dropdown" style="float: right;">
@@ -176,6 +178,7 @@
                         </div>
                     </div>
                 </div>
+                <script src='assets/js/theme.js'></script>
             </footer>
         </div>
     </body>

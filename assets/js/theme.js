@@ -1,17 +1,19 @@
-$(document).ready(function(){
-    $('#check').click(function(){
-        if($(this).is(":checked")){
-            
-            $("body").css('overflow', 'hidden');
-            
-        }
-        else if($(this).is(":not(:checked)")){
-          $("body").css('overflow', 'auto');
-          
-        }
-    });
-});
+$('.hamburger').on('click', function(){
+    $('.hamburger').toggleClass('is-active');
 
+    if ($(".hamburger").hasClass("is-active")) {
+        $("body").css('overflow', 'hidden');
+        $("ul").css('left', '0');
+        $(".dropdown").css('display', 'none');
+
+      }
+
+    else {
+        $("body").css('overflow', 'auto');
+        $("ul").css('left', '-100%');
+        $(".dropdown").css('display', '');
+    }
+});
 
 
 
@@ -23,16 +25,17 @@ $(document).ready(function(){
             // if larger or equal
             $("body").css('overflow', 'auto');
             
+
+            $(".hamburger").css('display', 'none');
             $(".nav-flex-items").css('display', 'none');
-            $(".dropbtn").css('display', '');
+           
             $("#nav").css('overflow', '');
         } 
 
         else {
             // if smaller
-            
             $(".nav-flex-items").css('display', 'block');
-            $(".dropbtn").css('display', 'none');
+            $(".hamburger").css('display', '');
             $("#nav").css('overflow', 'scroll');
         }
     }).resize(); // This will simulate a resize to trigger the initial run.
