@@ -91,7 +91,8 @@ var markerCallback = function() {
           zoom: 13,
           center: center,
           mapId: "e24b393c59b842b4",
-          disableDefaultUI: true
+          disableDefaultUI: true,
+          gestureHandling: 'greedy',
         };
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         for (i = 0; i < markers1.length; i++) {
@@ -206,6 +207,7 @@ $(document).ready(function() {
           category: category,
           map: map,
           icon: icon1,
+          
          
         });
 

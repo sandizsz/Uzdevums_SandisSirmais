@@ -757,13 +757,13 @@ header section {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.form-input input {
+.form-input form > input:not(:last-of-type)  {
   height: 43px;
-  text-indent: 12px;
   border-radius: 6px;
   outline: none;
   border: none;
   background: #c4c4c4 40%;
+  padding: 12px;
 }
 
 .form-input form input,
@@ -771,6 +771,7 @@ header section {
   width: 100%;
   background: rgba(196, 196, 196, 0.4);
   font-family: montserrat-regular;
+  
 }
 
 ::placeholder {
@@ -937,7 +938,7 @@ input[type="checkbox"] {
   max-width: 1366px;
   width: 100%;
   display: flex;
-  padding: 69px 4.54% 0;
+  padding: 60px 4.54% 0;
   position: relative;
   justify-content: space-between;
 }
@@ -2211,6 +2212,8 @@ font-family: montserrat-regular;
   border-radius: 14px;
 }
 
+
+
 .gm-style-iw {
   padding: 0 !important;
   overflow: visible !important;
@@ -2229,6 +2232,8 @@ font-family: montserrat-regular;
   margin-bottom: 60px;
   margin-inline: 271.5px
 }
+
+
 
 @media (max-width: 1100px) {
   .uznemumi-edinasana {
@@ -2250,7 +2255,22 @@ font-family: montserrat-regular;
     display: none;
   }
 
-}
+ 
+    .gm-style-iw-t {
+      
+    right: -179px !important;
+    bottom: -192px !important;
+    }
+  
+  
+  
+  .gm-style {
+    left: 120px !important;
+      top: 120px !important;
+    }
+  
+
+    
 
 @media (max-width: 650px) {
   .dropdownmap {
@@ -2269,11 +2289,57 @@ font-family: montserrat-regular;
 
 @media (max-width: 610px) {
   #map-canvas {
-    height: 606px;
+    height: 939px;
   }
 
+}
+
+@media (max-width: 576px) {
+  #infowindow {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    padding: 15px;
+  }
+
+  #infowindow img {
+    width: 112px;
+  }
+
+  #infowindow h3 {
+    padding-top: 15px;
+  }
+
+  #infowindow h3 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+#infowindow p {
+  font-size: 14px;
+  line-height: 17px;
+  padding-top: 20px;
+}
+
+.gm-style-iw, .gm-style-iw-c {
+  max-width: 280px !important;
+  width: 280px !important;
+}
+
+.gm-style-iw-t {
+  right: -131px !important;
+  bottom: -235px !important;
 
 }
+
+.gm-style {
+  left: 117px !important;
+  top: -356px !important;
+}
+
+}
+
+
 
 .uznemumi-edinasana div:nth-child(2) {
   margin-top: 33px;
@@ -2463,7 +2529,7 @@ button {
 .overlay__inner {
   padding: 45px 25px;
   position: relative;
-  top: 35%;
+  top: 6%;
   opacity: 1;
 }
 
