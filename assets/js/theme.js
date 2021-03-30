@@ -86,13 +86,14 @@ var markerCallback = function() {
 
       
 
-        var center = new google.maps.LatLng(56.9496, 24.1052);
+        var center = new google.maps.LatLng(56.9496, 24.1682);
         var mapOptions = {
           zoom: 13,
           center: center,
           mapId: "e24b393c59b842b4",
           disableDefaultUI: true,
           gestureHandling: 'greedy',
+          scrollwheel: false,
         };
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         for (i = 0; i < markers1.length; i++) {
