@@ -7,7 +7,7 @@
  */
 .hamburger {
  
-  display: inline-block;
+  display: block;
   cursor: pointer;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
