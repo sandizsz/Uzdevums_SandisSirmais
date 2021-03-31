@@ -129,15 +129,15 @@ nav ul li a {
   object-fit: cover;
   max-width: 1366px;
   width: 100%;
-  top: 82px;
+  top: -14px;
 }
 
 .homepage {
-  position: absolute;
+  position: relative;
 }
 
 .homepage_video {
-  margin-top: 47px;
+  margin-top: -77px;
 }
 
 .logo {
@@ -164,7 +164,7 @@ nav ul li a {
   }
 
   .divider img {
-    top: 70px;
+    top: -8px;
   }
 
   nav img {
@@ -218,6 +218,9 @@ header section {
       max-width: 768px;
   }
 
+  .homepage_video {
+    margin-top: -35px;
+}
   
 }
 
@@ -228,7 +231,7 @@ header section {
   }
 
   .divider img {
-    top: 52px;
+    top: 0;
   }
 
 
@@ -267,7 +270,7 @@ header section {
   .divider img {
       height: 19.53px;
       width: 320px;
-      top: 35px;
+      top: -8px;
   }
 
   nav img {
@@ -876,7 +879,6 @@ input[type="checkbox"] {
 @media (max-width: 768px) {
   .form-input {
       max-width: 608px;
-      max-height: 230px;
       margin-top: 60px;
   }
 
