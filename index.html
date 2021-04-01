@@ -43,7 +43,7 @@
                         <li><a href="uznemejiem.html">Uzņēmējiem</a></li>
                         <li><a href="sapnubanka.html">Sapņu banka</a></li>
                         <li><a href="sapnusatbalsta.html">Sapņus atbalsta</a></li>
-                        <li><a href="iedvesmasstasti">99 iedvesmas stāsti</a></li>
+                        <li><a href="iedvesmasstasti.html">99 iedvesmas stāsti</a></li>
                         <li>
                             <a href="#">
                                 <div class="dropdown" style="float: right;">
@@ -141,7 +141,7 @@
                     <h2>SAZINĀTIES AR MUMS</h2>
 
                     <div class="form-input">
-                        <form>
+                        <form id="register_form">
                             <p class="full-mobile">
                                 <input type="text" name="first_name" placeholder="Vārds, Uzvārds*" required />
                             </p>
@@ -167,10 +167,19 @@
                             </p>
 
                             <p class="fullcenter">
-                                <button class="email-button" type="submit">Sūtīt</button>
+                                <button class="email-button"  onsubmit="return false" type="button"  onclick="validateForm()" >Sūtīt</button>
                             </p>
                         </form>
                     </div>
+
+                    <div class="form_pazinojums">
+                        <p>Paldies, ka sapņo!</p>
+
+                        <p>Ja Tavs sapnis tiks izvēlēts, mēs ar Tevi sazināsimies.</p>
+
+                    </div>
+
+
                 </div>
             </main>
 

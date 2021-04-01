@@ -17,6 +17,29 @@ $('.hamburger').on('click', function(){
 
 
 
+
+
+function validateForm() {
+  var isValid = true;
+  var buttonchecked = document.querySelector("input[type='checkbox']").checked;
+  $('#register_form input, textarea').each(function() {
+    if ( $(this).val() === '' )
+        isValid = false;
+  });
+  
+  if (isValid == true && buttonchecked == true) {
+        $(".form_pazinojums").css('display', 'block');
+    $(".email-button").css('display', 'none');
+    $('#register_form')[0].reset();
+
+  }
+
+}
+
+
+
+
+
  $(document).ready(function() {
     // This will fire when document is ready:
     $(window).resize(function() {

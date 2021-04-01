@@ -260,7 +260,7 @@ header section {
   }
 
   nav ul {
-      top: 47px;
+      top: 44px;
   }
 
   
@@ -481,7 +481,6 @@ header section {
   position: absolute;
   top: 0;
   max-width: 1366px;
-  z-index: 2;
 }
 
 .divider2 {
@@ -761,7 +760,7 @@ header section {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.form-input form > input:not(:last-of-type)  {
+.form-input form input  {
   height: 43px;
   border-radius: 6px;
   outline: none;
@@ -769,6 +768,7 @@ header section {
   background: #c4c4c4 40%;
   padding: 12px;
 }
+
 
 .form-input form input,
 .form-input form textarea {
@@ -861,6 +861,7 @@ input[type="checkbox"] {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  padding: 0 !important;
 }
 
 .checkbox > input:checked {
@@ -875,6 +876,31 @@ input[type="checkbox"] {
   position: absolute;
   left: 3px;
 }
+
+.form_pazinojums {
+  display: none;
+  padding: 0 20px;
+}
+
+.form_pazinojums p {
+  font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+color: #FFA800;
+
+}
+
+
+.form_pazinojums p:nth-child(2) {
+font-size: 18px;
+line-height: 22px;
+padding-top: 30px;
+}
+
 
 @media (max-width: 768px) {
   .form-input {
@@ -2404,6 +2430,10 @@ font-family: montserrat-regular;
   top: -356px !important;
 }
 
+.uznemumi-edinasana {
+  display: none !important;
+}
+
 }
 
 
@@ -2596,7 +2626,7 @@ button {
 .overlay__inner {
   padding: 45px 25px;
   position: relative;
-  top: 6%;
+  top: 10%;
   opacity: 1;
 }
 
@@ -2733,6 +2763,15 @@ button {
 .komanda {
   text-align: center;
   margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+@media (max-width: 500px) {
+
+  .komanda {
+    margin-bottom: 120px;
+  }
+
 }
 
 .komanda > h3:first-child {
