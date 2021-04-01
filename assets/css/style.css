@@ -1841,13 +1841,22 @@ font-family: montserrat-regular;
   margin: 0 auto;
   display: block;
   text-align: center;
-  padding: 0 20px;
+  max-width: 818px;
+ 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
+  .text-uznemejiem {
+    padding: 0 80px;
+  }
+
+}
+
+@media (max-width: 500px) {
   .text-uznemejiem {
     font-size: 14px;
     line-height: 17px;
+    padding: 0 20px;
   }
 
 }
@@ -2533,7 +2542,7 @@ button {
   position: absolute;
 }
 .project p {
-  position: absolute;
+  position: relative;
   text-align: center;
   width: 100%;
   z-index: 3;
@@ -2563,7 +2572,7 @@ button {
 
 .grid__overlay {
   cursor: pointer;
-  background-image: url('./img/zelts.jpg');
+  background-image: url('/assets/img/zelts.png');
   height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
@@ -2594,11 +2603,9 @@ button {
   text-transform: uppercase;
   padding: 10px;
 }
-.grid__overlay button:hover {
+.grid__overlay .viewbutton:hover {
   transition: all 0.3s ease-in-out;
-  background: #ffffff;
-  color: #D1A39E;
-  transform: scale(1.05);
+
 }
 
 .overlay {
@@ -2783,7 +2790,13 @@ button {
 .komanda > p:first-of-type {
   color: #2f4858;
   margin: 0 auto;
-  margin-inline: clamp(20px, 1%, 380px);
+  padding: 0 80px
+}
+
+@media (max-width: 500px) {
+  .komanda > p:first-of-type {
+    padding: 0 20px
+  }
 }
 
 

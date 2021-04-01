@@ -373,6 +373,8 @@ $(".project").on('click' , function open(e) {
 
 
 
+
+
 function close() {
     $("body").css('overflow', 'auto');
 overlayParagraph.textContent = "";
