@@ -1078,13 +1078,25 @@ padding-top: 30px;
   }
 }
 
-@media (max-width: 862px) {
-  .zilsfooter img {
-      height: 450px;
-  }
-}
+
 
 @media (max-width: 768px) {
+  .zilsfooter img {
+    height: 410px;
+}
+
+.zils-div1 img {
+  width: 162px;
+}
+
+.footer-paragraph-big {
+  padding-bottom: 0px;
+}
+
+.wrap-teksts {
+  padding-top: 36px;
+}
+
   .neredzams {
       display: block;
   }
@@ -1103,7 +1115,7 @@ padding-top: 30px;
   }
 
   .wrap-apaksa {
-      padding: 35px 80px 0px;
+      padding: 35px 80px 50px;
   }
 
   .wrap-augsa {
@@ -1294,10 +1306,6 @@ padding-top: 30px;
 }
 
 @media (max-width: 768px) {
-  .logo-section-inner {
-      padding-inline: 10.65%;
-      margin-top: 15.31%;
-  }
 
   .logo-section {
     margin-top: 150px;
