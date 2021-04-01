@@ -2558,7 +2558,7 @@ button {
   width: 100%;
   right: 14px;
   bottom: -10px;
-  z-index: 3;
+  z-index: 1;
   text-transform: uppercase;
 }
 
@@ -2886,7 +2886,7 @@ transform: rotate(-180deg);
 
 }
 
-@media (max-width: 380px) {
+@media (max-width: 500px) {
   .komanda-foto-child {
     max-height: 354px;
     height: 100%;
@@ -2899,13 +2899,12 @@ transform: rotate(-180deg);
   }
 
   .komanda > p:first-of-type {
-    max-width: 280px;
     font-size: 14px;
     line-height: 17px;
   }
 
   .komanda-foto {
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 .komanda > h3:first-child {
