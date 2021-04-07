@@ -1061,9 +1061,11 @@ padding-top: 30px;
   color: white;
 }
 
-.neredzams {
+.neredzams, .break_index_footer {
   display: none;
 }
+
+
 
 .redzams1,
 .redzams2 {
