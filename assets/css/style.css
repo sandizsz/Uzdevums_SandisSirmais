@@ -1183,6 +1183,10 @@ padding-top: 30px;
       height: 649px;
   }
 
+  .zilsfooter_index img {
+    height: 669px;
+  }
+
   .zils-div4-inner {
       justify-content: flex-start;
   }
@@ -1225,6 +1229,10 @@ padding-top: 30px;
 
 .zilsfooter img {
   height: 597px;
+}
+
+.zilsfooter_index img {
+  height: 617px;
 }
 
 
@@ -1298,6 +1306,10 @@ padding-top: 30px;
 
   .zilsfooter img {
       height: 487px;
+  }
+
+  .zilsfooter_index img {
+    height: 507px;
   }
 }
 
