@@ -918,6 +918,13 @@ padding-top: 30px;
   }
 }
 
+
+@media (max-width: 700px) {
+  .break_index_footer {
+    display: block;
+  }
+}
+
 @media (max-width: 620px) {
   .full-mobile {
       grid-column: 1 / 3;
