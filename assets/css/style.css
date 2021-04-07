@@ -1501,6 +1501,8 @@ max-width: none;
   .textideja{
 padding: 0 20px;
 margin-bottom: 80px;
+font-size: 12px;
+line-height: 14.6px;
 }
 }
 
@@ -2217,7 +2219,7 @@ font-family: montserrat-regular;
 }
 
 
-@media (max-width: 460px) {
+@media (max-width: 500px) {
 
   h1 {
     font-size: 36px;
