@@ -1151,6 +1151,10 @@ padding-top: 30px;
   .break_index_footer {
     display: block  !important;
   }
+
+  .zilsfooter img {
+    height: 439px;
+}
 }
 
 
@@ -1216,6 +1220,15 @@ padding-top: 30px;
   height: 617px;
 }
 
+
+}
+
+@media (max-width: 370px) {
+
+.footer-paragraph-small1,
+.footer-paragraph-small2 {
+    font-size: 11px;
+}
 
 }
 
