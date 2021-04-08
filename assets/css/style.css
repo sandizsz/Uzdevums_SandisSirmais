@@ -2330,11 +2330,14 @@ font-family: montserrat-regular;
   max-width: 1366px;
   width: 100%;
   height: 648px;
+  z-index: -1;
 }
 
 .sapnusatbalsta .footer-wrapper-margin {
-  margin-top: 0px;
+  margin-top: -53px;
 }
+
+
 
 
 
@@ -2354,6 +2357,10 @@ font-family: montserrat-regular;
   color: #FFA800;
   padding-bottom: 15px;
 
+}
+
+[aria-label="Map"] {
+  margin: -76px;
 }
 
 
