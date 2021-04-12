@@ -57,7 +57,7 @@ nav ul li {
   margin-top: 51px;
 }
 
-#nav a.active,
+#nav a:active,
 #nav a:hover,
 .footer-ul1 a:hover,   /* footer nav */
 .footer-ul1 a:active { /* footer nav */
@@ -407,6 +407,7 @@ header section {
   max-width: 654px;
   max-height: 114px;
   margin: 0 auto;
+  color: #2F4858;
   margin-bottom: 150px;
   margin-top: 150px;
 }
@@ -1497,6 +1498,7 @@ h1 {
   font-weight: 400;
   font-size: 18px;
   line-height: 21.94px;
+  color: #2F4858;
   text-align: center;
   display: block;
 }
@@ -1591,11 +1593,21 @@ q {
  
 }
 
+
+@media (max-width: 320px) {
+  .quote{
+max-width: 280px;
+}
+
+}
+
+
 .atzinas {
   display: block;
   margin: 0 auto;
   margin-top: 150px;
   max-width: 602px;
+  color: #2F4858;
 
 }
 
