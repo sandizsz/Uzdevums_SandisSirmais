@@ -2062,6 +2062,7 @@ font-family: montserrat-regular;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.94px;
+  color: #2F4858;
 }
 
 .sapnu-banka-text-medium {
@@ -2070,10 +2071,12 @@ font-family: montserrat-regular;
   font-size: 24px;
   line-height: 29.26px;
   text-align: center;
+  color: #2F4858;
 }
 
 .text-size0 {
   padding: 50px 20px 0;
+  color: #2F4858;
 }
 
 .text-size1,
@@ -2158,6 +2161,7 @@ font-family: montserrat-regular;
 
 .cta-wrapper-sapnubanka p{
   max-width: 275px;
+  color: #2F4858;
   
 }
 
@@ -2248,7 +2252,6 @@ font-family: montserrat-regular;
     font-size: 16px;
     max-width: 280px;
     text-align: center;
-    padding-inline: min(20px, 5%, 50px);
   }
 
   .sapnu-banka-flex-item2 {
@@ -2489,19 +2492,6 @@ font-family: montserrat-regular;
   }
 
  
-    .gm-style-iw-t {
-      
-    right: -179px !important;
-    bottom: -192px !important;
-    }
-  
-  
-  
-  .gm-style {
-    left: 120px !important;
-      top: 120px !important;
-    }
-  
   }
     
 
@@ -2565,10 +2555,6 @@ font-family: montserrat-regular;
 
 }
 
-.gm-style {
-  left: 117px !important;
-  top: -356px !important;
-}
 
 .uznemumi-edinasana {
   display: none !important;
