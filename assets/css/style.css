@@ -2455,6 +2455,7 @@ font-family: montserrat-regular;
 .gm-style .gm-style-iw-c {
   background: none;
   border-radius: 14px;
+  transform: translate(-45%,-100%);
 }
 
 .uznemumi-edinasana {
@@ -2567,9 +2568,13 @@ font-family: montserrat-regular;
   display: none !important;
 }
 
+[aria-label="Map"] {
+  left: 138px !important; 
+  top: -176px !important;
+
 }
 
-
+}
 
 .uznemumi-edinasana div:nth-child(2) {
   margin-top: 33px;
