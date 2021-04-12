@@ -1595,7 +1595,7 @@ q {
 
 
 @media (max-width: 320px) {
-  .quote{
+  q{
 max-width: 280px;
 }
 
