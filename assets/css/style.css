@@ -749,7 +749,7 @@ header section {
 
 
 .form-input {
-  max-width: 612px;
+  max-width: 652px;
   margin: 0 auto;
   margin-top: 55px;
   padding: 0 20px;
@@ -788,8 +788,7 @@ header section {
 }
 
 .form-input form textarea {
-  height: 6rem;
-  padding: 1em;
+  padding: 12px;
   border-radius: 6px;
   resize: none;
   border: none;
@@ -836,13 +835,7 @@ input[type="checkbox"] {
   font-size: 14px;
   font-weight: 400;
   color: #2f4858;
-  margin-bottom: 6px;
-}
-
-.checkbox {
-  display: inline-flex;
-
-  position: relative;
+  margin-bottom: 10px;
 }
 
 .checkbox > span {
@@ -854,6 +847,21 @@ input[type="checkbox"] {
   color: #2f4858;
   line-height: 17.07px;
 }
+
+@media (max-width: 500px) {
+  .paragraph2, .checkbox > span {
+    font-size: 12px;
+    line-height: 14.6px;
+  }
+  }
+
+.checkbox {
+  display: inline-flex;
+
+  position: relative;
+}
+
+
 
 .checkbox > input {
   -webkit-appearance: none;
@@ -881,11 +889,10 @@ input[type="checkbox"] {
 
 .form_pazinojums {
   display: none;
-  padding: 0 20px;
 }
 
 .form_pazinojums p {
-  font-family: Montserrat;
+  font-family: montserrat-regular;
 font-size: 24px;
 font-style: normal;
 font-weight: 500;
@@ -906,7 +913,7 @@ padding-top: 30px;
 
 @media (max-width: 768px) {
   .form-input {
-      max-width: 608px;
+      max-width: 648px;
       margin-top: 60px;
   }
 
@@ -1957,6 +1964,7 @@ font-family: montserrat-regular;
   line-height: 21.94px;
   margin: 0 auto;
   display: block;
+  color: #2f4858;
   text-align: center;
   max-width: 978px;
   padding: 0 80px;
