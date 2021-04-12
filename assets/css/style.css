@@ -2491,6 +2491,14 @@ font-family: montserrat-regular;
     display: none;
   }
 
+
+
+.gm-style .gm-style-iw-c {
+
+    transform: translate(-60%,-20%);
+
+}
+
  
   }
     
@@ -2549,12 +2557,11 @@ font-family: montserrat-regular;
   width: 280px !important;
 }
 
-.gm-style-iw-t {
-  right: -131px !important;
-  bottom: -235px !important;
+.gm-style .gm-style-iw-c {
+
+  transform: translate(-100%,-20%);
 
 }
-
 
 .uznemumi-edinasana {
   display: none !important;
