@@ -101,11 +101,7 @@ var markerCallback = function() {
       function initMap() {
         console.log("init map")
 
-        infowindow = new google.maps.InfoWindow({
-            content: '',
-            pixelOffset: new google.maps.Size(250, 100)
-
-        });
+       
 
       
 
@@ -123,6 +119,7 @@ var markerCallback = function() {
           addMarker(markers1[i]);
         }
 
+
         
     var zoomControlDiv = document.createElement('div');
     var zoomControl = new ZoomControl(zoomControlDiv, map);
@@ -130,7 +127,15 @@ var markerCallback = function() {
   zoomControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
 
-  
+  var latlng = map.getCenter();
+
+  infowindow = new google.maps.InfoWindow({
+    content: '',
+    position: latlng,
+
+
+
+});
 
       }
 
@@ -235,6 +240,11 @@ $(document).ready(function() {
          
         });
 
+        marker1.addListener("click", () => {
+          map.setZoom(12);
+          map.setCenter(marker1.getPosition());
+        });
+
         gmarkers1.push(marker1);
 
         
@@ -247,17 +257,22 @@ $(document).ready(function() {
         google.maps.event.addListener(marker1, 'click', markerCallback);
 
 
+        
+
         google.maps.event.addListener(marker1,"click", (function(marker1, content) {
             return function() {
               console.log("Gmarker 1 gets pushed");
-              
+       
               infowindow.setContent(content);
               infowindow.open(map, marker1);
+              
+              
             };
           })(marker1, content)
         );
       }
 
+   
 
 
       

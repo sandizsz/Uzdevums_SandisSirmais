@@ -2455,7 +2455,7 @@ font-family: montserrat-regular;
 .gm-style .gm-style-iw-c {
   background: none;
   border-radius: 14px;
-  transform: translate(-45%,-100%);
+  transform: translate(10%,-40%);
 }
 
 .uznemumi-edinasana {
@@ -2496,7 +2496,7 @@ font-family: montserrat-regular;
 
 .gm-style .gm-style-iw-c {
 
-    transform: translate(-60%,-20%);
+  transform: translate(-8%,30%);
 
 }
 
@@ -2560,8 +2560,7 @@ font-family: montserrat-regular;
 
 .gm-style .gm-style-iw-c {
 
-  transform: translate(-100%,-20%);
-
+  transform: translate(-30%,30%);
 }
 
 .uznemumi-edinasana {
