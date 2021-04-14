@@ -2442,7 +2442,9 @@ font-family: montserrat-regular;
   border-radius: 14px;
 }
 
-
+.gm-ui-hover-effect {
+  display: none !important;
+}
 
 .gm-style-iw {
   padding: 0 !important;
@@ -2455,7 +2457,7 @@ font-family: montserrat-regular;
 .gm-style .gm-style-iw-c {
   background: none;
   border-radius: 14px;
-  transform: translate(10%,-40%);
+
 }
 
 .uznemumi-edinasana {
@@ -2494,11 +2496,7 @@ font-family: montserrat-regular;
 
 
 
-.gm-style .gm-style-iw-c {
 
-  transform: translate(-8%,30%);
-
-}
 
  
   }
@@ -2558,10 +2556,10 @@ font-family: montserrat-regular;
   width: 280px !important;
 }
 
-.gm-style .gm-style-iw-c {
-
-  transform: translate(-30%,30%);
+.img_smaller_mobile{
+  width: 76px  !important;
 }
+
 
 .uznemumi-edinasana {
   display: none !important;

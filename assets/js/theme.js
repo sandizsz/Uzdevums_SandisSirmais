@@ -94,6 +94,10 @@ var markerCallback = function() {
     this.setIcon(icon2);
     
  }
+
+
+
+
       //var infowindow; // = new google.maps.InfoWindow({
       //    content: ''
       //});
@@ -102,7 +106,7 @@ var markerCallback = function() {
         console.log("init map")
 
        
-
+      
       
 
         var center = new google.maps.LatLng(56.9496, 24.1682);
@@ -127,12 +131,10 @@ var markerCallback = function() {
   zoomControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
 
-  var latlng = map.getCenter();
 
   infowindow = new google.maps.InfoWindow({
     content: '',
-    position: latlng,
-
+    
 
 
 });
@@ -224,8 +226,15 @@ $(document).ready(function() {
 
 
 
+
       // Function to add markers to map
       function addMarker(marker) {
+
+
+
+
+
+        
         console.log("Add marker",marker)
         var category = marker[4];
         var pos = new google.maps.LatLng(marker[2], marker[3]);
@@ -236,13 +245,11 @@ $(document).ready(function() {
           category: category,
           map: map,
           icon: icon1,
+
+          
+          
           
          
-        });
-
-        marker1.addListener("click", () => {
-          map.setZoom(12);
-          map.setCenter(marker1.getPosition());
         });
 
         gmarkers1.push(marker1);
@@ -265,12 +272,50 @@ $(document).ready(function() {
        
               infowindow.setContent(content);
               infowindow.open(map, marker1);
+               
+
+        
+             
               
               
             };
           })(marker1, content)
         );
+
+        
+      $(document).ready(function() {
+        // This will fire when document is ready:
+        $(window).resize(function() {
+            // This will fire each time the window is resized:
+            if($(window).width() >= 768) {
+                // if larger or equal
+                infowindow.set("pixelOffset", new google.maps.Size(250, 100)); 
+            } 
+    
+            else if ($(window).width() >= 576) {
+                // if smaller
+
+                infowindow.set("pixelOffset", new google.maps.Size(150, 235)); 
+             
+            }
+
+            else {
+              infowindow.set("pixelOffset", new google.maps.Size(100, 250)); 
+            }
+        }).resize(); // This will simulate a resize to trigger the initial run.
+    });
+    
+
+    google.maps.event.addListener(map, "click", function(event) {
+      infowindow.close();
+      markerCallback();
+  });
+        
       }
+
+
+
+     
 
    
 
@@ -298,9 +343,9 @@ filterMarkers = function (category) {
 }
       
       markers1 = [
-        ['0', '<div id="infowindow"> <img src = "assets/img/PurchLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Purch restaurant</h3><p>+371 25425254</br>Dzelzavas iela 51A, Rīga</p></div></div>', 	56.9569506, 24.1892936, ['Rīga','Ēdināšana']],
+        ['0', '<div id="infowindow"> <img class = "img_smaller_mobile" src = "assets/img/PurchLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Purch restaurant</h3><p>+371 25425254</br>Dzelzavas iela 51A, Rīga</p></div></div>', 	56.9569506, 24.1892936, ['Rīga','Ēdināšana']],
         ['1', '<div id="infowindow"> <img src = "assets/img/KurtsLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Kurts coffee</h3><p>+371 23202079</br>Tērbatas iela 2i, Rīga</p></div></div>', 56.952127, 24.116603, ['Rīga', 'Ēdināšana']],
-        ['2', '<div id="infowindow"> <img src = "assets/img/KurtsLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Kurts coffee</h3><p>+371 23202079</br>Cēsu iela 20, Rīga</p></div></div>', 56.9651915, 24.1405323, ['Rīga', 'Ēdināšana']],
+        ['2', '<div id="infowindow"> <img class = "img_smaller_mobile" src = "assets/img/KurtsLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Kurts coffee</h3><p>+371 23202079</br>Cēsu iela 20, Rīga</p></div></div>', 56.9651915, 24.1405323, ['Rīga', 'Ēdināšana']],
         ['3', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.95051, 24.11203, ['Rīga','Drive-Thru']],
         ['4', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9606, 24.1754, ['Rīga', 'Skaistumkopšana']],
         ['5',  '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9535, 24.1180, [ 'Rīga', 'Skaistumkopšana']],
