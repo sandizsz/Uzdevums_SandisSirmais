@@ -82,8 +82,7 @@ nav ul li {
 }
 
 .dropdown-content {
-  padding-right: 17px;
-  padding-block: 10px;
+  padding: 0 17px 0 10px;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -155,9 +154,7 @@ nav ul li a {
 }
 
 @media (max-width: 1128px) {
-  .hamburger {
-      display: inline-block;
-  }
+
 
   nav {
     height: 70px;
@@ -184,7 +181,7 @@ nav ul li a {
       width: 100%;
       height: 100vh;
       background: white;
-      top: 68px;
+      top: 28px;
       left: -100%;
       text-align: center;
   }

@@ -44,7 +44,7 @@ function validateForm() {
     // This will fire when document is ready:
     $(window).resize(function() {
         // This will fire each time the window is resized:
-        if($(window).width() >= 1129) {
+        if($(window).width() >= 1130) {
             // if larger or equal
             $("body").css('overflow', 'auto');
             
