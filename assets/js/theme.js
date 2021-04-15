@@ -15,9 +15,31 @@ $('.hamburger').on('click', function(){
     }
 });
 
+// Nav menu open and close with hamburger menu, make body unscrollable, but nav menu scrollable
+
+$(document).ready(function() {
+  // This will fire when document is ready:
+  $(window).resize(function() {
+      // This will fire each time the window is resized:
+      if($(window).width() >= 1130) {
+          // if larger or equal
+          $("body").css('overflow', 'auto');
+          $(".hamburger").css('display', 'none');
+          $(".nav-flex-items").css('display', 'none');
+          $("#nav").css('overflow', '');
+      } 
+
+      else {
+          // if smaller
+          $(".nav-flex-items").css('display', 'block');
+          $(".hamburger").css('display', '');
+          $("#nav").css('overflow', 'scroll');
+      }
+  }).resize(); // This will simulate a resize to trigger the initial run.
+});
 
 
-
+// Responsive design for nav menu to be opened when the window is resized - show hamburger menu.
 
 function validateForm() {
   var isValid = true;
@@ -36,33 +58,8 @@ function validateForm() {
 
 }
 
+// Validate form and push out a message when the button 'Sūtīt' is clicked
 
-
-
-
- $(document).ready(function() {
-    // This will fire when document is ready:
-    $(window).resize(function() {
-        // This will fire each time the window is resized:
-        if($(window).width() >= 1130) {
-            // if larger or equal
-            $("body").css('overflow', 'auto');
-            
-
-            $(".hamburger").css('display', 'none');
-            $(".nav-flex-items").css('display', 'none');
-           
-            $("#nav").css('overflow', '');
-        } 
-
-        else {
-            // if smaller
-            $(".nav-flex-items").css('display', 'block');
-            $(".hamburger").css('display', '');
-            $("#nav").css('overflow', 'scroll');
-        }
-    }).resize(); // This will simulate a resize to trigger the initial run.
-});
 
 
 $(document).ready(function(){
@@ -80,36 +77,34 @@ $("#topBtn").click(function(){
     });
 });
 
+
+// Scroll to top button which appears when user has scrolled down a certain amount -> when clicked it jumps to the top of the page
+
+
+
+
 var gmarkers1 = [];
 var markers1 = [];
 
 var icon1 = "assets/img/googlemapsmarker.svg";
 var icon2 = "assets/img/googlemapsmarker2.svg";
 
-
 var markerCallback = function() {
-    for (var i=0; i<gmarkers1.length; i++) {
-        gmarkers1[i].setIcon(icon1);
-    }
-    this.setIcon(icon2);
-    
- }
+  for (var i=0; i<gmarkers1.length; i++) {
+      gmarkers1[i].setIcon(icon1);
+  }
+  this.setIcon(icon2);
+  
+}
 
 
 
 
-      //var infowindow; // = new google.maps.InfoWindow({
-      //    content: ''
-      //});
-      // Function to init map
       function initMap() {
         console.log("init map")
 
-       
-      
-      
-
         var center = new google.maps.LatLng(56.9496, 24.1682);
+        
         var mapOptions = {
           zoom: 13,
           center: center,
@@ -118,6 +113,7 @@ var markerCallback = function() {
           gestureHandling: 'greedy',
           scrollwheel: false,
         };
+
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         for (i = 0; i < markers1.length; i++) {
           addMarker(markers1[i]);
@@ -231,7 +227,7 @@ $(document).ready(function() {
       function addMarker(marker) {
 
 
-
+       
 
 
         
@@ -306,14 +302,16 @@ $(document).ready(function() {
     });
     
 
+  
+
     google.maps.event.addListener(map, "click", function(event) {
       infowindow.close();
-      markerCallback();
+      marker1.setIcon(icon1)
       
       
   });
         
-      }
+}
 
 
 
