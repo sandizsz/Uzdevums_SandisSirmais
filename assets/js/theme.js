@@ -449,7 +449,16 @@ overlayParagraph.textContent = "";
 
 }
 
-buttons.forEach(button => button.addEventListener('click', open));
-document.querySelector('.close').addEventListener('click', close);
+if ( $('.open').length > 0 ) {
+  buttons.forEach(button => button.addEventListener('click', open)); 
+}
+
+
+
+if ( $('.close').length > 0 ) {
+  document.querySelector('.close').addEventListener('click', close);  
+}
+
+
 
 
