@@ -100,29 +100,36 @@ var markerCallback = function() {
 
 
 
-      function initMap() {
-        console.log("init map")
+ function initMap() {
 
-        var center = new google.maps.LatLng(56.9496, 24.1682);
+    var center = new google.maps.LatLng(56.95051, 24.11203);
+
+    // Added a variable for map center
         
-        var mapOptions = {
+    var mapOptions = {
           zoom: 13,
           center: center,
           mapId: "e24b393c59b842b4",
           disableDefaultUI: true,
           gestureHandling: 'greedy',
           scrollwheel: false,
-        };
+     };
 
-        map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    //Customization of the map itself
+
+   
+
+    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
         for (i = 0; i < markers1.length; i++) {
           addMarker(markers1[i]);
         }
 
+      // Initialized the map in #map-canvas, added markers from an array
 
         
-    var zoomControlDiv = document.createElement('div');
-    var zoomControl = new ZoomControl(zoomControlDiv, map);
+      var zoomControlDiv = document.createElement('div');
+      var zoomControl = new ZoomControl(zoomControlDiv, map);
 
   zoomControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
@@ -130,8 +137,6 @@ var markerCallback = function() {
 
   infowindow = new google.maps.InfoWindow({
     content: '',
-    
-
 
 });
 
@@ -225,11 +230,6 @@ $(document).ready(function() {
 
       // Function to add markers to map
       function addMarker(marker) {
-
-
-       
-
-
         
         console.log("Add marker",marker)
         var category = marker[4];
@@ -241,10 +241,6 @@ $(document).ready(function() {
           category: category,
           map: map,
           icon: icon1,
-
-          
-          
-          
          
         });
 
