@@ -349,17 +349,13 @@ filterMarkers = function (category) {
         ['7', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9680, 24.1750, ['Rīga', 'Izklaide']],
     ];
 
-    $(document).ready(function() {
-        // This will fire when document is ready:
-        $(window).resize(function() {
-            // This will fire each time the window is resized:
+$(document).ready(function() {
+  // This will fire when document is ready:
+   $(window).resize(function() {
+      // This will fire each time the window is resized:
             if($(window).width() >= 769) {
-             
                 $('.show-more').hide();
                 $('.project:gt(19)').show();
-
-                 
-               
             } 
     
             else {
@@ -371,17 +367,18 @@ filterMarkers = function (category) {
         }).resize(); // This will simulate a resize to trigger the initial run.
     });
 
-
+// When window is resized and its size is at tablet width -> add button 'skatīt vairāk' and hide the rest of the blocks.
 
 
    
       
       $('.show-more').on('click', function() {
-        //toggle elements with class .ty-compact-list that their index is bigger than 2
         $('.project:gt(19)').toggle();
-        //change text of show more element just for demonstration purposes to this demo
         $(this).text() === 'Skatīt vairāk' ? $(this).text('Skatīt mazāk') : $(this).text('Skatīt vairāk');
       });
+
+// Skatīt vairāk / Skatīt mazāk button for Iedvesmas stasti.
+    
 
 const buttons = document.querySelectorAll('.project');
 const button = document.querySelector('.project');
