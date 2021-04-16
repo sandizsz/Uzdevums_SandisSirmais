@@ -2387,7 +2387,7 @@ font-family: montserrat-regular;
   transition: 0.3s color ease-in-out;
 }
 .dropdown-el label:nth-child(2) {
-  margin-top: 2em;
+  margin-top: 3em;
 
 }
 
@@ -2398,7 +2398,7 @@ font-family: montserrat-regular;
     top: 42px;
     margin-left: 16px;
     width: 211px;
-    height: .1px;
+    height: 1px;
     background: #2f4858;
 }
 
