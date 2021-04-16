@@ -2368,7 +2368,7 @@ font-family: montserrat-regular;
   transition: 0.3s all ease-in-out;
 }
 .dropdown-el input:focus + label {
-  font-weight: 900;
+  font-weight: 700;
 }
 .dropdown-el input {
   width: 1px;
@@ -2408,7 +2408,7 @@ font-family: montserrat-regular;
   position: absolute;
   top: 0;
   width: 100%;
-  font-weight: 900;
+  font-weight: 700;
 }
 .dropdown-el input:checked + label:nth-child(2) {
   margin-top: 0;
@@ -2419,7 +2419,7 @@ font-family: montserrat-regular;
 content: '\003E';
 position: absolute;
 right: 0.8em;
-font-weight: 900;
+font-weight: 700;
 top: 20px;
 transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
 transition: .4s all ease-in-out;
@@ -2433,10 +2433,10 @@ transition: all 250ms cubic-bezier(.4,.25,.3,1);
   max-height: 15em;
 }
 .dropdown-el.expanded label:hover {
-  font-weight: 900;
+  font-weight: 700;
 }
 .dropdown-el.expanded input:checked + label {
-  font-weight: 900;
+  font-weight: 700;
 }
 .dropdown-el.expanded::after {
   transform: rotate(-90deg) scaleY(1.75);
@@ -2506,7 +2506,7 @@ transition: all 250ms cubic-bezier(.4,.25,.3,1);
 }
 
 .mapselect1 select option:hover {
-  font-weight: 900;
+  font-weight: 700;
   background-color: yellow;
 }
 
