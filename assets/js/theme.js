@@ -3,14 +3,14 @@ $('.hamburger').on('click', function(){
 
     if ($(".hamburger").hasClass("is-active")) {
         $("body").css('overflow', 'hidden');
-        $("ul").css('left', '0');
+        $("ul").animate({left: '0px'});
         $(".dropdown").css('display', 'none');
 
       }
 
     else {
         $("body").css('overflow', 'auto');
-        $("ul").css('left', '-100%');
+        $("ul").animate({left: '-100%'});
         $(".dropdown").css('display', '');
     }
 });
@@ -80,7 +80,11 @@ $("#topBtn").click(function(){
 
 // Scroll to top button which appears when user has scrolled down a certain amount -> when clicked it jumps to the top of the page
 
+$(".hamburger-box").click(function(){
+  $('html, body').animate({scrollTop : 0}, 100);
+  });
 
+// Jump the page to the top when hamburger menu is opened to avoid a gap between the divider and ul menu
 
 
 var gmarkers1 = [];
