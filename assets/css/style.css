@@ -384,6 +384,7 @@ header section {
   z-index: 2;
   outline: none;
   border-radius: 10px;
+  display: none;
 
 }
 
@@ -2088,6 +2089,7 @@ font-family: montserrat-regular;
 
 .logo-section-inner-item1-sapnu p {
   margin-top: 40px;
+  color: #ffffff;
 }
 
 .sapnubanka-h3 {
@@ -2346,6 +2348,101 @@ font-family: montserrat-regular;
 
 
 /* Sapnus atbalsta lapa start */
+
+
+.dropdown-el {
+  min-width: 280px;
+  position: relative;
+  display: inline-block;
+  margin-right: 1em;
+  min-height: 42px;
+  max-height: 42px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+  color: #2F4858;
+  outline: none;
+  border-radius: 6px;
+  background-color: rgba(196, 196, 196, 0.4);
+  transition: 0.3s all ease-in-out;
+}
+.dropdown-el input:focus + label {
+  font-weight: 600;
+}
+.dropdown-el input {
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  position: absolute;
+  opacity: 0.01;
+}
+.dropdown-el label {
+  display: block;
+  line-height: 42px;
+  padding-left: 1em;
+  padding-right: 3em;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s color ease-in-out;
+}
+.dropdown-el label:nth-child(2) {
+  margin-top: 2em;
+
+}
+
+
+.dropdown-el::before {
+  content: '';
+    position: absolute;
+    top: 42px;
+    margin-left: 16px;
+    width: 211px;
+    height: .1px;
+    background: #2f4858;
+}
+
+.dropdown-el input:checked + label {
+  display: block;
+  border-top: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-weight: 600;
+}
+.dropdown-el input:checked + label:nth-child(2) {
+  margin-top: 0;
+  position: relative;
+}
+
+.dropdown-el::after {
+content: '\003E';
+position: absolute;
+right: 0.8em;
+font-weight: 900;
+top: 20px;
+transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
+transition: .4s all ease-in-out;
+transition: all 250ms cubic-bezier(.4,.25,.3,1);
+}
+
+.dropdown-el.expanded {
+  background: rgba(196, 196, 196, 0.4);
+  border-radius: 6px;
+  padding: 0;
+  max-height: 15em;
+}
+.dropdown-el.expanded label:hover {
+  font-weight: 600;
+}
+.dropdown-el.expanded input:checked + label {
+  font-weight: 600;
+}
+.dropdown-el.expanded::after {
+  transform: rotate(-90deg) scaleY(1.75);
+  top: 0.55em;
+}
+
 #map-canvas {
   max-width: 1366px;
   width: 100%;
@@ -2368,12 +2465,13 @@ font-family: montserrat-regular;
   display: flex;
   justify-content: center;
   margin: 90px 0 60px;
+  font-size: 18px;
+  line-height: 21.94px;
+  font-family: montserrat-regular;
 }
 .dropdownmap_text {
   font-family: montserrat-regular;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21.94px;
+  font-weight: 500;
   margin: 0 auto;
   display: block;
   text-align: left;
@@ -2522,6 +2620,14 @@ font-family: montserrat-regular;
 }
 
 @media (max-width: 576px) {
+
+  
+
+.dropdownmap {
+  font-size: 14px;
+  line-height: 17px;
+}
+
   #infowindow {
     flex-direction: column;
     align-items: flex-end;

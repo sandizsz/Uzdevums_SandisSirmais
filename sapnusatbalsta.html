@@ -85,38 +85,23 @@
                     <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
                 </div>
 
-
-               
-                
-                
-
                 <div class="dropdownmap">
-                    
+
                     <div class="mapselect1">
                         <p class="dropdownmap_text">Uzņēmuma atrašanās vieta</p>
-                    <!-- Drop-Down Filter Menu -->
-                    <select id="one" class="demoSelect"  onchange="filterMarkers(this.value);">
-                    <option value="" hidden>Izvēlies</option>
-                    <option value="Rīga">Rīga</option>
-                    <option value="Ogre">Ogre</option>
-                    <option value="Jelgava">Jelgava</option>
-                    <!--Add more "options" for the dropdown menu-->
-                    </select>
-                 
+                    <span class="dropdown-el">
+                        <label for="sort-relevance" style="pointer-events: none;">Izvēlies</label>
+                        <input type="radio" name="sortType" value="Popularity" id="sort-best"><label for="sort-best">Rīga</label>
+                        <input type="radio" name="sortType" value="PriceIncreasing" id="sort-low"><label for="sort-low">Jelgava</label>
+                        <input type="radio" name="sortType" value="PriceDecreasing" id="sort-high"><label for="sort-high">Ogre</label>
+                      </span>
+
+                     </div>
 
                 </div>
+           
+       
 
-                <div class="mapselect2">
-                    <p class="dropdownmap_text">Uzņēmuma veids</p>
-                    <select id="two" class="demoSelect"  onchange="filterMarkers(this.value);">
-                        <option value="" hidden>Izvēlies</option>
-                        <option value="Ēdināšana">Ēdināšana</option>
-                        <option value="Skaistumkopšana">Skaistumkopšana</option>
-                        <option value="Izklaide">Izklaide</option>
-                        <!--Add more "options" for the dropdown menu-->
-                        </select>
-                </div>
-            </div>
 
             <div class="uznemumi-edinasana skaistumkopsana" hidden>
                 <div class="uznemumi-edinasana-child">

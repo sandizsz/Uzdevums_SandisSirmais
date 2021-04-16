@@ -65,7 +65,7 @@ function validateForm() {
 $(document).ready(function(){
 
     $(window).scroll(function(){
-        if($(this).scrollTop() > 40 ) {
+        if($(this).scrollTop() > 50 ) {
             $('#topBtn').fadeIn();
         } else{
             $('#topBtn').fadeOut();
@@ -455,5 +455,29 @@ if ( $('.close').length > 0 ) {
 }
 
 
+
+
+function valueChanged(){
+
+
+  if(document.getElementById("sort-best").checked == true || document.getElementById("sort-high").checked == true || document.getElementById("sort-low").checked == true)  {
+    $("label[for=sort-relevance]").css('visibility', 'hidden');
+    $("label[for=sort-relevance]").remove();
+  }
+}
+
+
+$('.dropdown-el').click(function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+ 
+  $(this).toggleClass('expanded');
+  $('#'+$(e.target).attr('for')).prop('checked',true);
+  valueChanged();
+});
+$(document).click(function() {
+  $('.dropdown-el').removeClass('expanded');
+  
+});
 
 
