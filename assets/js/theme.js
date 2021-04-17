@@ -93,6 +93,18 @@ var markers1 = [];
 var icon1 = "assets/img/googlemapsmarker.svg";
 var icon2 = "assets/img/googlemapsmarker2.svg";
 
+
+markers1 = [
+  ['0', '<div id="infowindow"> <img class = "img_smaller_mobile" src = "assets/img/PurchLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Purch restaurant</h3><p>+371 25425254</br>Dzelzavas iela 51A, Rīga</p></div></div>', 	56.9569506, 24.1892936, ['Rīga','Ēdināšana']],
+  ['1', '<div id="infowindow"> <img src = "assets/img/KurtsLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Kurts coffee</h3><p>+371 23202079</br>Tērbatas iela 2i, Rīga</p></div></div>', 56.952127, 24.116603, ['Rīga', 'Ēdināšana']],
+  ['2', '<div id="infowindow"> <img class = "img_smaller_mobile" src = "assets/img/KurtsLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Kurts coffee</h3><p>+371 23202079</br>Cēsu iela 20, Rīga</p></div></div>', 56.9651915, 24.1405323, ['Rīga', 'Ēdināšana']],
+  ['3', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.95051, 24.11203, ['Rīga','Drive-Thru']],
+  ['4', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9606, 24.1754, ['Rīga', 'Skaistumkopšana']],
+  ['5',  '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9535, 24.1180, [ 'Rīga', 'Skaistumkopšana']],
+  ['6', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.98, 24.1754, ['Rīga', 'Izklaide']],
+  ['7', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9680, 24.1750, ['Rīga', 'Izklaide']],
+];
+
 var markerCallback = function() {
   for (var i=0; i<gmarkers1.length; i++) {
       gmarkers1[i].setIcon(icon1);
@@ -319,39 +331,68 @@ $(document).ready(function() {
 
    
 
+// var dropdown = $('input[type="radio"]:checked+label').text();
+
+
+
 
       
-      // Function to filter markers by category
-      //filterMarkers = function (category) {
+//       // Function to filter markers by category
+//       //filterMarkers = function (category) {
       
-filterMarkers = function (category) {
-    var bounds = new google.maps.LatLngBounds();
-    for (i = 0; i < gmarkers1.length; i++) {
-        marker = gmarkers1[i];
+// filterMarkers = function (category) {
+//     var bounds = new google.maps.LatLngBounds();
+//     for (i = 0; i < gmarkers1.length; i++) {
+//         marker = gmarkers1[i];
+//         console.log(category);
 
-        // If is same category or category not picked
-        if((typeof marker.category == 'object' && marker.category.indexOf(category) >= 0) || category.length == 0){
-            marker.setVisible(true);
-            bounds.extend(marker.getPosition());
-        }
-        // Categories don't match 
-        else {
-            marker.setVisible(false);
-        }
-        map.fitBounds(bounds);
-    }
+//         // If is same category or category not picked
+//         if((typeof marker.category == 'object' && marker.category.indexOf(category) >= 0) || category.length == 0){
+//             marker.setVisible(true);
+//             bounds.extend(marker.getPosition());
+
+//             console.log(marker.category);
+//             console.log(marker.category.indexOf(category));
+//             console.log(category.length);
+
+//         }
+//         // Categories don't match 
+//         else {
+//             marker.setVisible(false);
+//         }
+//         map.fitBounds(bounds);
+//     }
+// }
+  
+// Function on Change of checkbox
+updateView = function (element) {
+  var bounds = new google.maps.LatLngBounds();
+  if (element) {
+      //Get array with names of the checked boxes
+      checkedBoxes = ([...document.querySelectorAll('input[type=radio]:checked')]).map(function(o) { return o.id; });
+      console.log(checkedBoxes);
+      for (i = 0; i < markers1.length; i++) {
+          marker = gmarkers1[i];
+        
+          //Filter to show any markets containing ALL of the selected options
+          if(typeof marker.category == 'object' && checkedBoxes.every(function (o) {
+      return (marker.category).indexOf(o) >= 0;})){
+        bounds.extend(marker.getPosition());
+              marker.setVisible(true);
+          }
+          else {
+              marker.setVisible(false);
+          }
+          map.fitBounds(bounds);
+      }
+  }
+  else {
+      console.log('No param given');
+  }
 }
-      
-      markers1 = [
-        ['0', '<div id="infowindow"> <img class = "img_smaller_mobile" src = "assets/img/PurchLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Purch restaurant</h3><p>+371 25425254</br>Dzelzavas iela 51A, Rīga</p></div></div>', 	56.9569506, 24.1892936, ['Rīga','Ēdināšana']],
-        ['1', '<div id="infowindow"> <img src = "assets/img/KurtsLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Kurts coffee</h3><p>+371 23202079</br>Tērbatas iela 2i, Rīga</p></div></div>', 56.952127, 24.116603, ['Rīga', 'Ēdināšana']],
-        ['2', '<div id="infowindow"> <img class = "img_smaller_mobile" src = "assets/img/KurtsLogo.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">Kurts coffee</h3><p>+371 23202079</br>Cēsu iela 20, Rīga</p></div></div>', 56.9651915, 24.1405323, ['Rīga', 'Ēdināšana']],
-        ['3', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.95051, 24.11203, ['Rīga','Drive-Thru']],
-        ['4', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9606, 24.1754, ['Rīga', 'Skaistumkopšana']],
-        ['5',  '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9535, 24.1180, [ 'Rīga', 'Skaistumkopšana']],
-        ['6', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.98, 24.1754, ['Rīga', 'Izklaide']],
-        ['7', '<div id="infowindow"> <img src = "assets/img/AUCHlogo 1.svg"> <div class="AuchUznemums-child1"><h3 class="infouznemums">AUCH beauty home</h3><p>+371 28361686, +371 23202079</br>auchbeauty@gmail.com</br>Cēsu iela 20, Rīga</p></div></div>', 56.9680, 24.1750, ['Rīga', 'Izklaide']],
-    ];
+
+
+
 
 $(document).ready(function() {
   // This will fire when document is ready:
@@ -459,10 +500,15 @@ if ( $('.close').length > 0 ) {
 
 function valueChanged(){
 
-
-  if(document.getElementById("sort-best").checked == true || document.getElementById("sort-high").checked == true || document.getElementById("sort-low").checked == true)  {
+  if(document.getElementById("Rīga").checked == true || document.getElementById("Ogre").checked == true || document.getElementById("Jelgava").checked == true)  {
     $("label[for=sort-relevance]").css('visibility', 'hidden');
     $("label[for=sort-relevance]").remove();
+
+  }
+
+  if (document.getElementById("Izklaide").checked == true || document.getElementById("Ēdināšana").checked == true || document.getElementById("Skaistumkopšana").checked == true) {
+    $("label[for=sort-relevance1]").css('visibility', 'hidden');
+    $("label[for=sort-relevance1]").remove();
   }
 }
 
@@ -470,14 +516,21 @@ function valueChanged(){
 $('.dropdown-el').click(function(e) {
   e.preventDefault();
   e.stopPropagation();
- 
+
+  var clickedOption = $('#' + $(e.target).attr('for'));
+  if( clickedOption ) {
+    $('#' + $(e.target).attr('for')).prop('checked', true);
+    updateView(this);
+  }
+  
   $(this).toggleClass('expanded');
-  $('#'+$(e.target).attr('for')).prop('checked',true);
   valueChanged();
 });
+
 $(document).click(function() {
   $('.dropdown-el').removeClass('expanded');
-  
 });
+
+
 
 
