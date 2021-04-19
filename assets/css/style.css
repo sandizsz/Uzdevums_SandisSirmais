@@ -2439,7 +2439,7 @@ transition: all 250ms cubic-bezier(.4,.25,.3,1);
   background: rgba(196, 196, 196, 0.4);
   border-radius: 6px;
   padding: 12px 15px;
-  max-height: 114px;
+  max-height: 15em;
 }
 .dropdown-el.expanded label:hover {
   font-weight: 700;
