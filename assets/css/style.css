@@ -2380,16 +2380,17 @@ font-family: montserrat-regular;
 .dropdown-el label {
   display: block;
   line-height: 42px;
-  padding-left: 1em;
-  padding-right: 3em;
+padding: 0 15px;
   cursor: pointer;
   position: relative;
   transition: 0.3s color ease-in-out;
 }
+
 .dropdown-el label:nth-child(2) {
   margin-top: 38px;
 
 }
+
 
 
 .dropdown-el::before {
@@ -2400,6 +2401,7 @@ font-family: montserrat-regular;
     width: 211px;
     height: 1px;
     background: #2f4858;
+
 }
 
 .dropdown-el input:checked + label {
@@ -2418,11 +2420,10 @@ font-family: montserrat-regular;
 .dropdown-el::after {
 content: '\003E';
 position: absolute;
-right: 0.8em;
+right: 15px;
 font-weight: 700;
 top: 20px;
 transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
-transition: .4s all ease-in-out;
 transition: all 250ms cubic-bezier(.4,.25,.3,1);
 }
 

@@ -207,37 +207,7 @@ var markerCallback = function() {
       } 
 
       
-$(document).ready(function() {
-    // dropdown funkcija priekš option filtra
-    $(".demoSelect").on("change", function() {
-        // This will fire each time the window is resized:
-        if( $("#one").val() == "Rīga" && $("#two").val() == "Ēdināšana") 
-        { 
-           //show the div
-           $(".uznemumi-edinasana").show();
-        } 
-        else 
-        {  
-           //hide the div
-           $(".uznemumi-edinasana").hide(); 
-        }
 
-        if( $("#one").val() == "Rīga" && $("#two").val() == "Skaistumkopšana") 
-        { 
-           //show the div
-           $(".skaistumkopsana").show();
-        } 
-        else 
-        {  
-           //hide the div
-           $(".skaistumkopsana").hide(); 
-        }
-
-            
-            
-        
-    });// This will simulate a resize to trigger the initial run.
-});   
 
 
 
@@ -383,6 +353,7 @@ updateView = function (element) {
           else {
               marker.setVisible(false);
           }
+          
           map.fitBounds(bounds);
       }
   }
@@ -504,13 +475,55 @@ function valueChanged(){
     $("label[for=sort-relevance]").css('visibility', 'hidden');
     $("label[for=sort-relevance]").remove();
 
+
   }
 
   if (document.getElementById("Izklaide").checked == true || document.getElementById("Ēdināšana").checked == true || document.getElementById("Skaistumkopšana").checked == true) {
     $("label[for=sort-relevance1]").css('visibility', 'hidden');
     $("label[for=sort-relevance1]").remove();
+   
   }
 }
+
+
+$(document).ready(function() {
+  // dropdown funkcija priekš option filtra
+  $(".dropdown-el").on("click", function() {
+
+    var dropdowntext1 = $('.mapselect1 input[type="radio"]:checked+label').text();
+    var dropdowntext2 = $('.mapselect2 input[type="radio"]:checked+label').text();
+     // This will fire each time the window is resized:
+      if( dropdowntext1 == "Rīga" && dropdowntext2 == "Ēdināšana") 
+      { 
+         //show the div
+         $(".uznemumi-edinasana").show();
+      } 
+      else 
+      {  
+         //hide the div
+         $(".uznemumi-edinasana").hide(); 
+      }
+
+      if( dropdowntext1 == "Rīga" && dropdowntext2 == "Skaistumkopšana") 
+      { 
+         //show the div
+         $(".skaistumkopsana").show();
+      } 
+      else 
+      {  
+         //hide the div
+         $(".skaistumkopsana").hide(); 
+      }
+
+          
+          
+      
+  });// This will simulate a resize to trigger the initial run.
+});   
+
+
+
+
 
 
 $('.dropdown-el').click(function(e) {
