@@ -2354,7 +2354,7 @@ font-family: montserrat-regular;
   min-width: 280px;
   position: relative;
   display: inline-block;
-  min-height: 42px;
+  padding: 12px 15px 0;
   max-height: 42px;
   overflow: hidden;
   cursor: pointer;
@@ -2378,25 +2378,31 @@ font-family: montserrat-regular;
 }
 .dropdown-el label {
   display: block;
-  line-height: 42px;
-padding: 0 15px;
   cursor: pointer;
   position: relative;
   transition: 0.3s color ease-in-out;
 }
 
+
+.dropdown-el label:not(:last-child) {
+  padding-bottom: 10px;
+}
+
 .dropdown-el label:nth-child(2) {
-  margin-top: 38px;
+  margin-top: 40px;
 
 }
 
+
+label[for=sort-relevance], label[for=sort-relevance1] {
+  padding-bottom: 19px !important;
+}
 
 
 .dropdown-el::before {
   content: '';
     position: absolute;
     top: 42px;
-    margin-left: 16px;
     width: 211px;
     height: 1px;
     background: #2f4858;
@@ -2407,13 +2413,16 @@ padding: 0 15px;
   display: block;
   border-top: none;
   position: absolute;
-  top: 0;
+  top: 12px;
+  padding-bottom: 19px;
   width: 100%;
   font-weight: 700;
 }
 .dropdown-el input:checked + label:nth-child(2) {
   margin-top: 0;
   position: relative;
+  padding-top: 0px;
+  top: 0;
 }
 
 .dropdown-el::after {
@@ -2429,8 +2438,8 @@ transition: all 250ms cubic-bezier(.4,.25,.3,1);
 .dropdown-el.expanded {
   background: rgba(196, 196, 196, 0.4);
   border-radius: 6px;
-  padding: 0;
-  max-height: 15em;
+  padding: 12px 15px;
+  max-height: 114px;
 }
 .dropdown-el.expanded label:hover {
   font-weight: 700;

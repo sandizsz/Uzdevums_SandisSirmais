@@ -472,13 +472,13 @@ if ( $('.close').length > 0 ) {
 function valueChanged(){
 
   if(document.getElementById("Rīga").checked == true || document.getElementById("Ogre").checked == true || document.getElementById("Jelgava").checked == true)  {
-    $("label[for=sort-relevance]").css('visibility', 'hidden');
+    $("label[for=sort-relevance]").css('display', 'none');
     $("label[for=sort-relevance]").remove();
 
   }
 
   if (document.getElementById("Izklaide").checked == true || document.getElementById("Ēdināšana").checked == true || document.getElementById("Skaistumkopšana").checked == true) {
-    $("label[for=sort-relevance1]").css('visibility', 'hidden');
+    $("label[for=sort-relevance1]").css('display', 'none');
     $("label[for=sort-relevance1]").remove();
    
   }
