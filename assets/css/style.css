@@ -2389,7 +2389,7 @@ font-family: montserrat-regular;
 }
 
 .dropdown-el label:nth-child(2) {
-  margin-top: 40px;
+  margin-top: 37px;
 
 }
 
@@ -2414,7 +2414,7 @@ label[for=sort-relevance], label[for=sort-relevance1] {
   border-top: none;
   position: absolute;
   top: 12px;
-  padding-bottom: 19px;
+  padding-bottom: 20px;
   width: 100%;
   font-weight: 700;
 }
