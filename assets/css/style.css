@@ -905,7 +905,7 @@ color: #FFA800;
 .form_pazinojums p:nth-child(2) {
 font-size: 18px;
 line-height: 22px;
-padding-top: 30px;
+    padding: 30px 20px 0;
 }
 
 
@@ -2476,7 +2476,7 @@ transition: all 250ms cubic-bezier(.4,.25,.3,1);
   margin: 90px 0 60px;
   font-size: 18px;
   line-height: 21.94px;
-  font-family: montserrat-regular;
+  font-family: montserrat-medium;
 }
 
 

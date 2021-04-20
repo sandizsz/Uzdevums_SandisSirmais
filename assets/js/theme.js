@@ -362,7 +362,7 @@ updateView = function (element) {
   }
 }
 
-
+// JS for page - iedvesmasstasti.html
 
 
 $(document).ready(function() {
@@ -383,17 +383,14 @@ $(document).ready(function() {
         }).resize(); // This will simulate a resize to trigger the initial run.
     });
 
-// When window is resized and its size is at tablet width -> add button 'skatīt vairāk' and hide the rest of the blocks.
 
-
-   
       
       $('.show-more').on('click', function() {
         $('.project:gt(19)').toggle();
         $(this).text() === 'Skatīt vairāk' ? $(this).text('Skatīt mazāk') : $(this).text('Skatīt vairāk');
       });
 
-// Skatīt vairāk / Skatīt mazāk button for Iedvesmas stasti.
+// When window size goes below tablet width of 768, it shows only 19 images from the grid and creates a button "Skatīt vairāk/mazāk" which shows or hides the rest of the images when clicked.
     
 
 const buttons = document.querySelectorAll('.project');
@@ -406,17 +403,25 @@ const overlayImage = document.querySelectorAll('.overlay__inner img')[0];
 const overlayImage1 = document.querySelectorAll('.overlay__inner img')[1];
 const overlayParagraph = document.querySelector('.overlay__inner p');
 
+
+// Defined constants that will be reused in the function
+
 $(".project").click(function(event) {
     $(".project").removeClass("active");
     $(event.currentTarget).addClass("active");
 });
 
 
+// Adds class .active to the current clicked on image from the grid
+
+
 $(".project").on('click' , function open(e) {
     if ($(".active").find('.video-wrap-iedvesmasstasti').length == 1) {
-        overlay.classList.add('open');
-        $("body").css('overflow', 'hidden');
-        const src= e.currentTarget.querySelectorAll('div')[0].className;
+
+  overlay.classList.add('open');
+  $("body").css('overflow', 'hidden');
+
+  const src= e.currentTarget.querySelectorAll('div')[0].className;
   overlayDiv.className = src;
   
   const src1= e.currentTarget.querySelectorAll('div')[1].className;
@@ -433,10 +438,7 @@ $(".project").on('click' , function open(e) {
 
   const src5= e.currentTarget.querySelector('p').textContent;
   overlayParagraph.textContent = src5;
-    } else {
-       
-  
-    }
+    } 
 })
 
 
