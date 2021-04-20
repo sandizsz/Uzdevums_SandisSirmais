@@ -486,21 +486,6 @@ function valueChanged(){
   }
   
 
-  if ($(".mapselect1 .dropdown-el").hasClass("expanded")) {
-    $(".mapselect1 .expanded").css('max-height', '114px');
-  }
-
-  else {
-    $(" .mapselect1 .dropdown-el").css('max-height', '42px');
-  }
-
-  if ($(".mapselect2 .dropdown-el").hasClass("expanded")) {
-    $(".mapselect2 .expanded").css('max-height', '114px');
-  }
-
-  else {
-    $(".mapselect2 .dropdown-el").css('max-height', '42px');
-  }
 
 
 
