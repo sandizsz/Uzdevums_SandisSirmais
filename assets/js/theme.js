@@ -478,6 +478,9 @@ function valueChanged(){
     
   }
 
+  
+
+
  
 
   if (document.getElementById("Izklaide").checked == true || document.getElementById("Ēdināšana").checked == true || document.getElementById("Skaistumkopšana").checked == true) {
