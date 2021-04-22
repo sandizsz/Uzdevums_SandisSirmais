@@ -113,6 +113,8 @@ var markerCallback = function() {
   
 }
 
+// Loop through markers and set to icon2 the selected marker
+
 
 
 
@@ -246,16 +248,10 @@ var markerCallback = function() {
 
         google.maps.event.addListener(marker1,"click", (function(marker1, content) {
             return function() {
-              console.log("Gmarker 1 gets pushed");
        
               infowindow.setContent(content);
               infowindow.open(map, marker1);
-               
-
-        
-             
-              
-              
+ 
             };
           })(marker1, content)
         );
@@ -283,7 +279,7 @@ var markerCallback = function() {
         }).resize(); // This will simulate a resize to trigger the initial run.
     });
     
-
+// To set infowindow to the place accordingly to the design, by changing pixelofset when window is resized
   
 
     google.maps.event.addListener(map, "click", function(event) {
@@ -295,46 +291,10 @@ var markerCallback = function() {
         
 }
 
-
-
-     
-
-   
-
-// var dropdown = $('input[type="radio"]:checked+label').text();
+// This closes infowindow and changes marker to icon1 when clicked on the map
 
 
 
-
-      
-//       // Function to filter markers by category
-//       //filterMarkers = function (category) {
-      
-// filterMarkers = function (category) {
-//     var bounds = new google.maps.LatLngBounds();
-//     for (i = 0; i < gmarkers1.length; i++) {
-//         marker = gmarkers1[i];
-//         console.log(category);
-
-//         // If is same category or category not picked
-//         if((typeof marker.category == 'object' && marker.category.indexOf(category) >= 0) || category.length == 0){
-//             marker.setVisible(true);
-//             bounds.extend(marker.getPosition());
-
-//             console.log(marker.category);
-//             console.log(marker.category.indexOf(category));
-//             console.log(category.length);
-
-//         }
-//         // Categories don't match 
-//         else {
-//             marker.setVisible(false);
-//         }
-//         map.fitBounds(bounds);
-//     }
-// }
-  
-// Function on Change of checkbox
 updateView = function (element) {
   var bounds = new google.maps.LatLngBounds();
   if (element) {
@@ -357,12 +317,94 @@ updateView = function (element) {
           map.fitBounds(bounds);
       }
   }
-  else {
-      console.log('No param given');
-  }
+ 
 }
 
-// JS for page - iedvesmasstasti.html
+
+// This function updatesview and filter sthe markers to show only markers that fit into categories - after that it reads their LatLng to create a bound that show only those markers that are checked in the dropdown menu
+
+
+function valueChanged(){
+
+  if(document.getElementById("Rīga").checked == true || document.getElementById("Ogre").checked == true || document.getElementById("Jelgava").checked == true)  {
+    $("label[for=sort-relevance]").css('display', 'none');
+    $("label[for=sort-relevance]").remove();
+    
+    
+  }
+ 
+
+  if (document.getElementById("Izklaide").checked == true || document.getElementById("Ēdināšana").checked == true || document.getElementById("Skaistumkopšana").checked == true) {
+    $("label[for=sort-relevance1]").css('display', 'none');
+    $("label[for=sort-relevance1]").remove();
+  }
+
+}
+
+
+// This will hide the option 'Izvēlies' whenever any other option has been chosen in the dropdown menu
+
+
+$(document).ready(function() {
+  // dropdown funkcija priekš option filtra
+  $(".dropdown-el").on("click", function() {
+
+    var dropdowntext1 = $('.mapselect1 input[type="radio"]:checked+label').text();
+    var dropdowntext2 = $('.mapselect2 input[type="radio"]:checked+label').text();
+     // This will fire each time the window is resized:
+      if( dropdowntext1 == "Rīga" && dropdowntext2 == "Ēdināšana") 
+      { 
+         //show the div
+         $(".uznemumi-edinasana").show();
+      } 
+      else 
+      {  
+         //hide the div
+         $(".uznemumi-edinasana").hide(); 
+      }
+
+      if( dropdowntext1 == "Rīga" && dropdowntext2 == "Skaistumkopšana") 
+      { 
+         //show the div
+         $(".skaistumkopsana").show();
+      } 
+      else 
+      {  
+         //hide the div
+         $(".skaistumkopsana").hide(); 
+      }
+
+          
+          
+      
+  });// This will simulate a resize to trigger the initial run.
+});   
+
+
+// Shows the div above the map of the information on the markers for user to see if the categories match
+
+
+
+$('.dropdown-el').click(function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+
+  var clickedOption = $('#' + $(e.target).attr('for'));
+  if( clickedOption ) {
+    $('#' + $(e.target).attr('for')).prop('checked', true);
+    updateView(this);
+  }
+  
+  $(this).toggleClass('expanded');
+  valueChanged();
+});
+
+$(document).click(function() {
+  $('.dropdown-el').removeClass('expanded');
+});
+
+// for dropdown menu to expand and to initialize other functions mentioned above
+
 
 
 $(document).ready(function() {
@@ -458,6 +500,8 @@ overlayParagraph.textContent = "";
 
 }
 
+// when X is clicked on an open video in iedvesmasstasti, it removes the classnames making sure the next video that is opened doesnt duplicate their classname
+
 if ( $('.open').length > 0 ) {
   buttons.forEach(button => button.addEventListener('click', open)); 
 }
@@ -469,92 +513,6 @@ if ( $('.close').length > 0 ) {
 }
 
 
+// This will fire only when the page has class .open or .close in order to stop it from firing when the page doesnt these classes
 
-
-function valueChanged(){
-
-  if(document.getElementById("Rīga").checked == true || document.getElementById("Ogre").checked == true || document.getElementById("Jelgava").checked == true)  {
-    $("label[for=sort-relevance]").css('display', 'none');
-    $("label[for=sort-relevance]").remove();
-    
-    
-  }
-
-  
-
-
- 
-
-  if (document.getElementById("Izklaide").checked == true || document.getElementById("Ēdināšana").checked == true || document.getElementById("Skaistumkopšana").checked == true) {
-    $("label[for=sort-relevance1]").css('display', 'none');
-    $("label[for=sort-relevance1]").remove();
-  }
-  
-
-
-
-
-}
-
-
-$(document).ready(function() {
-  // dropdown funkcija priekš option filtra
-  $(".dropdown-el").on("click", function() {
-
-    var dropdowntext1 = $('.mapselect1 input[type="radio"]:checked+label').text();
-    var dropdowntext2 = $('.mapselect2 input[type="radio"]:checked+label').text();
-     // This will fire each time the window is resized:
-      if( dropdowntext1 == "Rīga" && dropdowntext2 == "Ēdināšana") 
-      { 
-         //show the div
-         $(".uznemumi-edinasana").show();
-      } 
-      else 
-      {  
-         //hide the div
-         $(".uznemumi-edinasana").hide(); 
-      }
-
-      if( dropdowntext1 == "Rīga" && dropdowntext2 == "Skaistumkopšana") 
-      { 
-         //show the div
-         $(".skaistumkopsana").show();
-      } 
-      else 
-      {  
-         //hide the div
-         $(".skaistumkopsana").hide(); 
-      }
-
-          
-          
-      
-  });// This will simulate a resize to trigger the initial run.
-});   
-
-
-
-
-
-
-$('.dropdown-el').click(function(e) {
-  e.preventDefault();
-  e.stopPropagation();
-
-  var clickedOption = $('#' + $(e.target).attr('for'));
-  if( clickedOption ) {
-    $('#' + $(e.target).attr('for')).prop('checked', true);
-    updateView(this);
-  }
-  
-  $(this).toggleClass('expanded');
-  valueChanged();
-});
-
-$(document).click(function() {
-  $('.dropdown-el').removeClass('expanded');
-});
-
-
-
-
+// JS for page - iedvesmasstasti.html
