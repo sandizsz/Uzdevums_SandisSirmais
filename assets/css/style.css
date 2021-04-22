@@ -2743,9 +2743,12 @@ transition: all 250ms cubic-bezier(.4,.25,.3,1);
 #infowindow {
   background: rgba(255, 168, 0, 0.5);
   display: flex;
-  gap: 38px;
   padding: 22px 27px 25px 30px;
   
+}
+
+#infowindow img {
+  padding-right: 38px;
 }
 
 #infowindow p, 
@@ -2800,6 +2803,7 @@ transition: all 250ms cubic-bezier(.4,.25,.3,1);
 
   #infowindow img {
     width: 112px;
+    padding-right: 0;
   }
 
   #infowindow h3 {
