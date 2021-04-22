@@ -25,13 +25,13 @@ $(document).ready(function() {
           // if larger or equal
           $("body").css('overflow', 'auto');
           $(".hamburger").css('display', 'none');
-          $(".nav-flex-items").css('display', 'none');
+          $(".nav-dropdown-mobile").css('display', 'none');
           $("#nav").css('overflow', '');
       } 
 
       else {
           // if smaller
-          $(".nav-flex-items").css('display', 'block');
+          $(".nav-dropdown-mobile").css('display', 'block');
           $(".hamburger").css('display', '');
           $("#nav").css('overflow', 'scroll');
       }
@@ -50,7 +50,7 @@ function validateForm() {
   });
   
   if (isValid == true && buttonchecked == true) {
-        $(".form_pazinojums").css('display', 'block');
+        $(".form-pazinojums").css('display', 'block');
     $(".email-button").css('display', 'none');
     $('#register_form')[0].reset();
 
@@ -168,7 +168,7 @@ var markerCallback = function() {
       
         // Set CSS for the control wrapper
         var controlWrapper = document.createElement('div');
-        controlDiv.className += "appendix";
+        controlDiv.className += "ZoomControl";
         controlWrapper.style.cursor = 'pointer';
         controlWrapper.style.textAlign = 'center';
         controlWrapper.style.width = '56.45px'; 
