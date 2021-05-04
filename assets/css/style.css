@@ -140,7 +140,7 @@ line-height: 26.6px;
 }
 .content p{
   color: #fff;
-  font-family: Montserrat;
+  font-family: montserrat-regular;
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
@@ -152,7 +152,7 @@ margin-right: 56px;
 
 .content p a{
   color: #fff;
-  font-family: Montserrat;
+  font-family: montserrat-regular;
 font-size: 14px;
 font-style: normal;
 font-weight: 700;
