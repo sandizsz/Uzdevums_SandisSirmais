@@ -106,6 +106,99 @@ line-height: 26.6px;
 
 }
 
+/* cookies */
+
+.wrapper{
+  position: fixed;
+  top: auto;
+  bottom: -5px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  max-width: 818px;
+  background: #2F4858;
+  border-radius: 8px;
+  z-index: 3;
+}
+
+.wrapper.hide{
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+::selection{
+  color: #fff;
+  background: #FCBA7F;
+}
+
+
+.content{
+  display: flex;
+  padding: 32px 46px 28px 32px;
+}
+.content p{
+  color: #fff;
+  font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: left;
+margin-right: 56px;
+}
+
+.content p a{
+  color: #fff;
+  font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+}
+.content .buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons button{
+  backface-visibility: hidden;
+  outline: none;
+  border: none;
+  position: relative;
+  height: 34px;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: #ffa800;
+  border-radius: 50.33px;
+  color: #fff;
+  font-size: 14px;
+  font-family: montserrat-regular;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 34px;
+}
+
+.buttons .item:last-child {
+  background: #fff;
+  color: #2F4858;
+  margin-left: 32px;
+}
+
+.buttons button:hover{
+  transform: scale(0.97);
+}
+.buttons .item{
+  width: 131px;
+}
+.buttons a{
+  color: #FCBA7F;
+}
+
 
 
 /* nav menu start */
@@ -118,7 +211,7 @@ nav {
   width: 100%;
   padding: 0 62px;
   position: relative;
-  z-index: 2;
+  z-index: 4;
 }
 
 
@@ -3019,7 +3112,7 @@ button {
 
 .grid__overlay {
   cursor: pointer;
-  background: url(/Uzdevums_SandisSirmais/assets/img/zelts.png);
+  background: url(/assets/img/zelts.png);
   height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
