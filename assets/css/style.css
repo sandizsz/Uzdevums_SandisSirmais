@@ -40,7 +40,7 @@ header {
 }
 
 .container {
-  max-width: 1366px;
+ 
   min-width: 320px;
   margin: 0 auto;
 }
@@ -336,9 +336,9 @@ header section {
   position: relative;
   z-index: 1;
   object-fit: cover;
-  max-width: 1366px;
+
   width: 100%;
-  top: -14px;
+
 }
 
 .homepage {
